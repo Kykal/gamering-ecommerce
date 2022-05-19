@@ -1,5 +1,23 @@
+:root {
+	--magenta:	#D32F87;
+	--red:		#FF3535;
+	--white-1:	#FFFFFF;
+	--white-2:	#F4F4F4;
+	--grey:		#999999;
+	--black-1:	#202020;
+	--black-2:	#0A0A0A;
+	--black-3:	#000000;
+}
+
+
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
+	font-family: Roboto, Arial;
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+
+	background-color: var(--black-2);	
 }
