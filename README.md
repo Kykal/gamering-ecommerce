@@ -9,11 +9,11 @@ An e-commerce webapp focused to buy PC components, accesories, peripherals and m
 2. [References](#references)
 - - -
 # Libraries
-- ReactJS
-- Material-UI
-- i18Next
-- React-Router
+- [ReactJS](https://reactjs.org/)
+- [Material-UI](https://mui.com/)
+- [i18Next](https://www.i18next.com/)
+- [React-Router](https://reactrouter.com/)
 # References
-- Amazon
-- HyperX
-- Asus ROG
+- [Amazon](https://www.amazon.com/)
+- [HyperX](https://www.hyperxgaming.com/)
+- [Asus ROG](https://rog.asus.com/)
