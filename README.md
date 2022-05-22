@@ -2,7 +2,7 @@
 						
 						
 # Gamering | E-commerce
-A e-commerce webapp focused to buy PC components, accesories, peripherals and more online.
+An e-commerce webapp focused to buy PC components, accesories, peripherals and more online.
 - - -
 # Content
 1. [Libraries](#libraries)
