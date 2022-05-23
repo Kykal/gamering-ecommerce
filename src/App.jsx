@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 
 
 //React router
@@ -19,7 +19,7 @@ import Search			from './pages/Search';
 
 //Main component content
 const App = () => {
-
+	
 	//Component render
 	return (
 		<Routes>

@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
+
+//MATERIAL DESIGN
+//Components
+import Box from '@mui/material/Box';
 
 
 //Custom components
 import Header from '../../components/Header';
+
 
 //Main component content
 const Home = () => {

@@ -70,12 +70,12 @@ const LanguageItem = () => {
 	//Change language
 	const ChangeLanguage = (event) => {
 		
-		const newLanguage = event.target.getAttribute("value")
+		const newLanguage = event.target.getAttribute("value"); //Get value from menu item
 		
 		setAnchorEl(null); //Close menu
-		setLanguage(newLanguage);
-		i18n.changeLanguage(newLanguage);
-		changeLocalStorageLanguage(newLanguage);
+		setLanguage(newLanguage); //Change visual language 
+		i18n.changeLanguage(newLanguage); //Change global language
+		changeLocalStorageLanguage(newLanguage); //Change local storage language
 	};
 
 	//Component render

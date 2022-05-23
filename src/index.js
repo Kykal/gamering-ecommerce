@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
@@ -24,7 +24,8 @@ import global_en from '../src/translations/en/global.json';
 
 
 //Custom component
-import App from './App';
+import MainLoading from './components/MainLoading';
+const App = lazy( () => import('./App') );
 
 
 i18next.init({
@@ -46,7 +47,9 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<I18nextProvider i18n={i18next} >
-				<App />
+				<Suspense fallback={<MainLoading />}>
+					<App />
+				</Suspense>
 			</I18nextProvider>
 		</BrowserRouter>
 	</React.StrictMode>

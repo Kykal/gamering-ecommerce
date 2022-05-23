@@ -16,6 +16,7 @@ const SearchContent = () => {
 	
 	const [ data, setData ] = useState([]);
 
+	//Fetch data when page loads
 	useEffect( () => {
 		axios.get('https://my-json-server.typicode.com/Kykal/temp-db/db')
 			.then( res => {
@@ -34,7 +35,7 @@ const SearchContent = () => {
 	return (
 		<main>
 			{data.map( (element, index) => (
-				<Box key={index} color="var(--cyan)" >
+				<Box key={index} color="var(--white-1)" >
 					{element.name}
 				</Box>
 			) )}

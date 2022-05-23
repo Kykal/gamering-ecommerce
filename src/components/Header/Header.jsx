@@ -4,10 +4,6 @@ import React, { useState, useEffect } from 'react';
 import logo from '../../assets/img/logo.png';
 
 
-//Utils
-import { checkLanguage } from '../../utils/languageUtils';
-
-
 //React router
 import { Link } from 'react-router-dom';
 
@@ -50,18 +46,16 @@ const Icon = styled(IconButton)({
 //Main component content
 const Header = ({actual}) => {
 
-	const [ t, i18 ] = useTranslation("global"); 
+	const [ t ] = useTranslation("global"); 
 	const [ isSearching, setIsSearching ] = useState(false);
 
-	useEffect( () => {
-		i18.changeLanguage(checkLanguage());
-	}, [] );
 
 	//Shows search bar
 	const isSearchingHandler = () => {
 		//Change bool status
 		setIsSearching( prevState => !prevState );
 	};
+
 
 	//Component render
 	return (
