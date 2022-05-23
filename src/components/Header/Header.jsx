@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 //Logo
 import logo from '../../assets/img/logo.png';
+
+
+//Utils
+import { checkLanguage } from '../../utils/languageUtils';
 
 
 //React router
@@ -16,7 +20,6 @@ import Grid			from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 //Icons
 import SearchIcon			from '@mui/icons-material/Search';
-import LanguageIcon		from '@mui/icons-material/Language';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 //Styles
 import { styled } from '@mui/material/styles';
@@ -45,13 +48,18 @@ const Icon = styled(IconButton)({
 
 
 //Main component content
-const Header = () => {
+const Header = ({actual}) => {
 
 	const [ t, i18 ] = useTranslation("global"); 
 	const [ isSearching, setIsSearching ] = useState(false);
 
+	useEffect( () => {
+		i18.changeLanguage(checkLanguage());
+	}, [] );
+
 	//Shows search bar
-	const IsSearchingHandler = () => {
+	const isSearchingHandler = () => {
+		//Change bool status
 		setIsSearching( prevState => !prevState );
 	};
 
@@ -75,24 +83,29 @@ const Header = () => {
 								<img
 									src={logo}
 									alt="Gamering logo"
-									width="200"
+									
+									style={{
+										width: "100%",
+										maxWidth: "12.5em",
+										height: "auto"	
+									}}
 								/>
 							</Link>
 						</Box>
 					</Grid>
 					<Grid component="nav" item container xs={6}>
-						<HeaderItem>
+						<HeaderItem to="/components" actual={ actual==="components" ? true : false } >
 							{t("header.components")}
 						</HeaderItem>
-						<HeaderItem>
-							{t("header.accessories")}
+						<HeaderItem to="/accesories" actual={ actual==="accesories" ? true : false } >
+							{t("header.accesories")}
 						</HeaderItem>
-						<HeaderItem>
+						<HeaderItem to="/peripherals" actual={ actual==="peripherals" ? true : false } >
 							{t("header.peripherals")}
 						</HeaderItem>
 					</Grid>
 					<Grid item xs={3} display="flex" justifyContent="space-evenly" alignItems="center" >
-						<Icon size="large" onClick={IsSearchingHandler} >
+						<Icon size="large" onClick={isSearchingHandler} >
 							<SearchIcon fontSize="inherit" />
 						</Icon>
 						<Icon size="large" >
@@ -102,7 +115,7 @@ const Header = () => {
 						</Icon>
 					</Grid>
 				</Grid>
-				{isSearching && <SearchContainer onCloseSearchBar={IsSearchingHandler} /> } {/* When search icon is pressed, this component will render */}
+				{isSearching && <SearchContainer onCloseSearchBar={isSearchingHandler} /> } {/* When search icon is pressed, this component will render */}
 			</Grid>
 		</>
 	);

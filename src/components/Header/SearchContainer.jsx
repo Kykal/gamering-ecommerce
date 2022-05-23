@@ -1,4 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+
+//Utils
+import { parseUrl } from '../../utils/urlUtils'; //Replace spaces with '+'
+
+
+//React router
+import {
+	Link,
+	useNavigate
+} from 'react-router-dom';
 
 
 //MATERIAL DESIGN
@@ -34,13 +45,32 @@ const SearchBar = styled(TextField)({
 	}
 });
 //Styled IconButton MUI component
-const CloseButton = styled(IconButton)({
+const CIconButton = styled(IconButton)({
 	color: "var(--white-2)"
 })
+
 
 //Main component content
 const SearchContainer = ({onCloseSearchBar}) => {
 
+	const navigate = useNavigate();
+	const [ searchValue, setSearchValue ] = useState("");
+
+	//Updates search bar value
+	const searchValueHandler = (event) => {
+		setSearchValue(event.target.value);
+	};
+
+	//When user press enter key
+	const EnterKeyPressed = (event) => {
+		//If pressed key is not "Enter", return
+		if( event.key !== "Enter" ){
+			return;
+		}
+
+		onCloseSearchBar();
+		navigate(`/search?query=${parseUrl(searchValue)}`, { replace: true });
+	};
 
 	//Component render
 	return (
@@ -61,18 +91,29 @@ const SearchContainer = ({onCloseSearchBar}) => {
 			<Grid item xs={6} sm={6} md={3} >
 				<SearchBar
 					fullWidth
+
+					value={searchValue}
+					onChange={searchValueHandler}
+					onKeyDown={EnterKeyPressed}
+
+					autoFocus
+
 					InputProps={{
 						startAdornment:
 							<InputAdornment position="start" >
-								<SearchIcon />
+								<Link to={`/search?query=${parseUrl(searchValue)}`} onClick={onCloseSearchBar} >
+									<CIconButton >
+										<SearchIcon />
+									</CIconButton>
+								</Link>
 							</InputAdornment>
 					}}
 				/>
 			</Grid>
 			<Grid item xs={1} >
-				<CloseButton size="large" onClick={onCloseSearchBar} >
-					<CloseIcon fontSize="large" />
-				</CloseButton>
+				<CIconButton size="large" onClick={onCloseSearchBar} >
+					<CloseIcon fontSize="inherit" />
+				</CIconButton>
 			</Grid>
 		</Grid>
 	);

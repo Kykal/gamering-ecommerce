@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 
 
+//Utils
+import {
+	changeLocalStorageLanguage,
+	checkLanguage
+} from '../../utils/languageUtils';
 
 
 //MATERIAL DESIGN
@@ -49,7 +54,7 @@ const LanguageItem = () => {
 	const [ t, i18n ] = useTranslation("global");
 
 	const [ anchorEl, setAnchorEl ] = useState(null);
-	const [ language, setLanguage ] = useState("en");
+	const [ language, setLanguage ] = useState(`${checkLanguage().toString()}`);
 
 	const open = Boolean(anchorEl);
 
@@ -70,6 +75,7 @@ const LanguageItem = () => {
 		setAnchorEl(null); //Close menu
 		setLanguage(newLanguage);
 		i18n.changeLanguage(newLanguage);
+		changeLocalStorageLanguage(newLanguage);
 	};
 
 	//Component render

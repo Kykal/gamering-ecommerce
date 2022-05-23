@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 
 
 //React router
@@ -9,7 +9,12 @@ import {
 
 
 //Routes
-import Home from './pages/Home';
+import Home				from './pages/Home';
+import Components		from './pages/Components';
+import Accesories		from './pages/Accesories';
+import Peripherals	from './pages/Peripherals';
+import NotFound		from './pages/NotFound';
+import Search			from './pages/Search';
 
 
 //Main component content
@@ -18,7 +23,12 @@ const App = () => {
 	//Component render
 	return (
 		<Routes>
-			<Route path="/" exact element={ <Home /> } />
+			<Route path="/"				element={ <Home />			} />
+			<Route path="/search"		element={ <Search />			} />
+			<Route path="/components"	element={ <Components />	} />
+			<Route path="/accesories"	element={ <Accesories />	} />
+			<Route path="/peripherals" element={ <Peripherals />	} />
+			<Route path="*"			 	element={ <NotFound />		} />
 		</Routes>
 	);
 };

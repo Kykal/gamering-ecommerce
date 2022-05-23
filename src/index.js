@@ -7,6 +7,10 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 
+//Utils
+import { checkLanguage } from './utils/languageUtils';
+
+
 //React router
 import { BrowserRouter } from 'react-router-dom';
 
@@ -25,7 +29,7 @@ import App from './App';
 
 i18next.init({
 	interpolation: { escapeValue: false },
-	lng: "en",
+	lng: `${checkLanguage().toString()}`,
 	resources: {
 		es: {
 			global: global_es
