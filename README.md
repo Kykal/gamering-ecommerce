@@ -6,13 +6,24 @@ An e-commerce webapp focused to buy PC components, accesories, peripherals and m
 - - -
 # Content
 1. [Libraries](#libraries)
-2. [References](#references)
+2. [Color palette](#color-palette)
+3. [References](#references)
 - - -
 # Libraries
 - [ReactJS](https://reactjs.org/)
 - [Material-UI](https://mui.com/)
 - [i18Next](https://www.i18next.com/)
 - [React-Router](https://reactrouter.com/)
+# Color palette
+- magenta:	#D32F87;
+- red:		#FF3535;
+- white-1:	#FFFFFF;
+- white-2:	#F4F4F4;
+- grey:		#999999;
+- black-1:	#202020;
+- black-2:	#0A0A0A;
+- black-3:	#000000;
+- cyan: 	#2DE2E6;
 # References
 - [Amazon](https://www.amazon.com/)
 - [HyperX](https://www.hyperxgaming.com/)
