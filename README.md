@@ -15,17 +15,17 @@ An e-commerce webapp focused to buy PC components, accesories, peripherals and m
 - [i18Next](https://www.i18next.com/)
 - [React-Router](https://reactrouter.com/)
 # Color palette
-|Color name|Variable name|HEX|
-|-|-|-|
-|Deep Cerise|magenta|#D32F87|
-|Coral Red|red|#FF3535|
-|White|white-1|#FFFFFF|
-|Cultured|white-2|#F4F4F4|
-|Spanish Gray|grey|#999999|
-|Raisin Black|black-1|#202020|
-|Vampire Black|black-2|#0A0A0A|
-|Black|black-3|#000000|
-|Turquoise|cyan|#2DE2E6|
+|Color name|Variable name|HEX|RGB|
+|-|-|-|-|
+|Deep Cerise|magenta|#D32F87||
+|Coral Red|red|#FF3535||
+|White|white-1|#FFFFFF||
+|Cultured|white-2|#F4F4F4||
+|Spanish Gray|grey|#999999||
+|Raisin Black|black-1|#202020||
+|Vampire Black|black-2|#0A0A0A||
+|Black|black-3|#000000||
+|Turquoise|cyan|#2DE2E6|(45, 226, 230)|
 # References
 - [Amazon](https://www.amazon.com/)
 - [HyperX](https://www.hyperxgaming.com/)
