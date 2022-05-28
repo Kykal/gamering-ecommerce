@@ -17,14 +17,14 @@ An e-commerce webapp focused to buy PC components, accesories, peripherals and m
 # Color palette
 |Color name|Variable name|HEX|RGB|
 |-|-|-|-|
-|Deep Cerise|magenta|#D32F87||
-|Coral Red|red|#FF3535||
-|White|white-1|#FFFFFF||
-|Cultured|white-2|#F4F4F4||
-|Spanish Gray|grey|#999999||
-|Raisin Black|black-1|#202020||
-|Vampire Black|black-2|#0A0A0A||
-|Black|black-3|#000000||
+|Deep Cerise|magenta|#D32F87|(211, 47, 135)|
+|Coral Red|red|#FF3535|(255, 53, 53)|
+|White|white-1|#FFFFFF|(255, 255, 255)|
+|Cultured|white-2|#F4F4F4|(244, 244, 244)|
+|Spanish Gray|grey|#999999|(153, 153, 153)|
+|Raisin Black|black-1|#202020|(32, 32, 32)|
+|Vampire Black|black-2|#0A0A0A|(10, 10, 10)|
+|Black|black-3|#000000|(0, 0, 0)|
 |Turquoise|cyan|#2DE2E6|(45, 226, 230)|
 # References
 - [Amazon](https://www.amazon.com/)
