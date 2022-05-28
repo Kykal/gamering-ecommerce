@@ -21,11 +21,11 @@ An e-commerce webapp focused to buy PC components, accesories, peripherals and m
 |Coral Red|red|#FF3535|
 |White|white-1|#FFFFFF|
 |Cultured|white-2|#F4F4F4|
-|Grey|grey|#999999|
-|black-1|#202020|
-|black-2|#0A0A0A|
-|black-3|#000000|
-|cyan|#2DE2E6|
+|Spanish Gray|grey|#999999|
+|Raisin Black|black-1|#202020|
+|Vampire Black|black-2|#0A0A0A|
+|Black|black-3|#000000|
+|Turquoise|cyan|#2DE2E6|
 # References
 - [Amazon](https://www.amazon.com/)
 - [HyperX](https://www.hyperxgaming.com/)
