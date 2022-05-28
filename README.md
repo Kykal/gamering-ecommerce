@@ -15,6 +15,9 @@ An e-commerce webapp focused to buy PC components, accesories, peripherals and m
 - [i18Next](https://www.i18next.com/)
 - [React-Router](https://reactrouter.com/)
 # Color palette
+|Color|HEX|
+|-|-|
+|magenta|#D32F87|
 - magenta:	#D32F87;
 - red:		#FF3535;
 - white-1:	#FFFFFF;
