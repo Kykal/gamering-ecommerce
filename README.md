@@ -17,10 +17,10 @@ An e-commerce webapp focused to buy PC components, accesories, peripherals and m
 # Color palette
 |Color name|Variable name|HEX|
 |-|-|-|
-|Magenta|magenta|#D32F87|
-|Red|red|#FF3535|
-|white-1|#FFFFFF|
-|White|white-2|#F4F4F4|
+|Deep Cerise|magenta|#D32F87|
+|Coral Red|red|#FF3535|
+|White|white-1|#FFFFFF|
+|Cultured|white-2|#F4F4F4|
 |Grey|grey|#999999|
 |black-1|#202020|
 |black-2|#0A0A0A|
