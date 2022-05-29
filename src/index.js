@@ -24,13 +24,13 @@ import global_en from '../src/translations/en/global.json';
 
 
 //Custom component
-import MainLoading from './components/MainLoading';
+import LoadingScreen from './components/LoadingScreen';
 const App = lazy( () => import('./App') );
 
 
 i18next.init({
 	interpolation: { escapeValue: false },
-	lng: `${checkLanguage().toString()}`,
+	lng: `${checkLanguage()}`,
 	resources: {
 		es: {
 			global: global_es
@@ -47,7 +47,7 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<I18nextProvider i18n={i18next} >
-				<Suspense fallback={<MainLoading />}>
+				<Suspense fallback={<LoadingScreen />}>
 					<App />
 				</Suspense>
 			</I18nextProvider>

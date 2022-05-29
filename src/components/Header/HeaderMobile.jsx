@@ -2,16 +2,16 @@ import React from 'react';
 
 
 //Main component content
-const DrawerList = () => {
+const HeaderMobile = () => {
 
 
 	//Component render
 	return (
 		<>
-			
+			Mobile
 		</>
 	);
 };
 
 
-export default DrawerList; //Export main component
+export default HeaderMobile; //Export main component
