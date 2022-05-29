@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 //react-i18next
@@ -7,13 +7,13 @@ import { useTranslation } from 'react-i18next'; //To use internationalized strin
 
 //MATERIAL DESIGN
 //Components
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import IconButton from '@mui/material/IconButton';
+import Box					from '@mui/material/Box';
+import List 				from '@mui/material/List';
+import ListItem 			from '@mui/material/ListItem';
+import ListItemButton	from '@mui/material/ListItemButton';
+import ListItemText		from '@mui/material/ListItemText';
+import IconButton 		from '@mui/material/IconButton';
+import Dialog				from '@mui/material/Dialog';
 //Icons
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 //Styles
@@ -21,8 +21,8 @@ import { styled } from '@mui/material/styles';
 
 
 //Custom components
-import SearchBar from '../SearchBar';
-
+import SearchBar					from '../SearchBar';
+import MobileLanguageDialog	from './MobileLanguageDialog';
 
 //STYLED COMPONENTS
 const StyledLIT = styled(ListItemText)({
@@ -32,10 +32,35 @@ const StyledLIT = styled(ListItemText)({
 });
 
 
+const StyledDialog = styled(Dialog)({
+	"& .MuiDialog-paper": {
+		backgroundColor: "var(--black-2)",
+		color: "var(--white-1)"
+	},
+});
+
+
 //Main component content
 const MobileDrawer = ({closeDrawer}) => {
-
+	
 	const [ t ] = useTranslation("global");
+	
+	const [ dialogStatus, setDialogStatus ] = useState(false);
+	
+	//Options array
+	const drawerOptions = [
+		t("header.nav.components"),
+		t("header.nav.accessories"),
+		t("header.nav.peripherals")
+	];
+
+	const openLanguageDialog = () => {
+		setDialogStatus(true)
+	};
+
+	const closeLanguageDialog = () => {
+		setDialogStatus(false)
+	};
 
 	//Component render
 	return (
@@ -49,7 +74,7 @@ const MobileDrawer = ({closeDrawer}) => {
 				<ListItem>
 					<SearchBar />
 				</ListItem>
-				{[t("header.nav.components"), t("header.nav.accessories"), t("header.nav.peripherals") ].map( (element, index) => (
+				{drawerOptions.map( (element, index) => (
 					<ListItem  key={index} alignItems="center" >
 						<ListItemButton >
 							<StyledLIT primary={element} />
@@ -57,12 +82,19 @@ const MobileDrawer = ({closeDrawer}) => {
 					</ListItem>
 				) )}
 				<ListItem disablePadding alignItems="center">
-					<ListItemButton>
+					<ListItemButton onClick={openLanguageDialog} >
 						<StyledLIT primary={t("header.language")} sx={{ color:"var(--magenta)" }} />
 					</ListItemButton>
 				</ListItem>
 			</List>
+			<StyledDialog
+				open={dialogStatus}
+				onClose={closeLanguageDialog}
+			>
+				<MobileLanguageDialog closeDialog={closeLanguageDialog} />
+			</StyledDialog>
 		</>
+					
 	);
 };
 
