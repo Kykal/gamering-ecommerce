@@ -7,6 +7,17 @@
 			"peripherals": "PERIPHERALS"
 		},
 		"language": "LANGUAGE",
-		"searchbar": "Search..."
+		"searchbar": "Search...",
+		"languageDialog": {
+			"title": "Change language",
+			"english": {
+				"label": "English",
+				"value": "en"
+			},
+			"spanish": {
+				"label": "Spanish",
+				"value": "es"
+			}
+		}
 	}
 }
