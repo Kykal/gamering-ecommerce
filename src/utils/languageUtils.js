@@ -9,7 +9,7 @@ export const checkLanguage = () => {
 		return readLanguage();
 	}
 	
-	return language;
+	return language.toString();
 };
 
 
