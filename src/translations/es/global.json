@@ -1,3 +1,12 @@
 {
-	"loadingScreen": "Cargando"
+	"loadingScreen": "Cargando",
+	"header": {
+		"nav": {
+			"components": "COMPONENTES",
+			"accessories": "ACCESORIOS",
+			"peripherals": "PERIFÉRICOS"
+		},
+		"language": "IDIOMA",
+		"searchBar": "Buscar..."
+	}
 }
