@@ -2,9 +2,18 @@
 	"loadingScreen": "Loading",
 	"header": {
 		"nav": {
-			"components": "COMPONENTS",
-			"accessories": "ACCESSORIES",
-			"peripherals": "PERIPHERALS"
+			"components": {
+				"label": "COMPONENTS",
+				"url": "components"
+			},
+			"accessories": {
+				"label": "ACCESSORIES",
+				"url": "accessories"
+			},
+			"peripherals": {
+				"label": "PERIPHERALS",
+				"url": "peripherals"
+			}
 		},
 		"language": "LANGUAGE",
 		"searchbar": "Search...",
