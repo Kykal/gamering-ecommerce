@@ -1,23 +1,31 @@
-//Check if there is a language prefered as item in localStorage, if not create a new item 'lang' and set 'en' (english) as default language
+//Check if language item exists
 export const checkLanguage = () => {
 
-	let language = localStorage.getItem('lang');
-
-	//If there is no language specified in localStorage
+	const language = readLanguage();
+	
+	//If there is no language saved
 	if( language === null ){
-		//Create language item to save language preference
-		localStorage.setItem('lang', "en");
-		
-		language = localStorage.getItem('lang').toString();
-
-		return language;
+		createLanguage();
+		return readLanguage();
 	}
-
+	
 	return language;
 };
 
 
-//Change language preference saved in localStorage
-export const changeLocalStorageLanguage = (newLanguage) => {
+//Update language key value
+export const updateLanguage = (newLanguage) => {
 	localStorage.setItem('lang', newLanguage);
+};
+
+
+//FOR LOCAL USE
+//Create a language key and set it 'en' (english)
+const createLanguage = () => {
+	localStorage.setItem('lang', 'en');
+};
+
+//Fetch saved language
+const readLanguage = () => {
+	return localStorage.getItem('lang');
 };

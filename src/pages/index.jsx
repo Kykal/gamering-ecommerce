@@ -1,6 +1,6 @@
-export { default as Accesories	} 	from './Accesories';
-export { default as Components	} 	from './Components';
-export { default as Home			}	from './Home';
-export { default as NotFound		}	from './NotFound';
-export { default as Peripheral	} 	from './Peripherals';
-export { default as Search			} 	from './Search';
+export { default as AccessoriesPage	} from './AccessoriesPage';
+export { default as ComponentsPage	} from './ComponentsPage';
+export { default as HomePage			} from './HomePage';
+export { default as PageNotFound		} from './PageNotFound';
+export { default as PeripheralsPage	} from './PeripheralsPage';
+export { default as SearchPage		} from './SearchPage';

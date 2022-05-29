@@ -1,8 +1,3 @@
 {
-	"suspense": "Loading...",
-	"header": {
-		"components": "COMPONENTS",
-		"accesories": "ACCESORIES",
-		"peripherals": "PERIPHERALS"
-	}
+	"loadingScreen": "Loading"
 }
