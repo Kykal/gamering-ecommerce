@@ -4,15 +4,15 @@
 		"nav": {
 			"components": {
 				"label": "COMPONENTES",
-				"url": "components"
+				"url": "/components"
 			},
 			"accessories": {
 				"label": "ACCESORIOS",
-				"url": "accessories"
+				"url": "/accessories"
 			},
 			"peripherals": {
 				"label": "PERIFÉRICOS",
-				"url": "peripherals"
+				"url": "/peripherals"
 			}
 		},
 		"language": "IDIOMA",
