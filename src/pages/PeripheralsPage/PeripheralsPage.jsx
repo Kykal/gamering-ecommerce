@@ -2,6 +2,8 @@ import React from 'react';
 
 
 //MATERIAL DESIGN
+//Components
+import Typography from '@mui/material/Typography';
 //Hooks
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -24,7 +26,9 @@ const PeripheralsPage = () => {
 		<>
 			{ isDesktop && <HeaderDesktop	/>}
 			{!isDesktop && <HeaderMobile	/>}
-			<p style={{ color:"var(--white-1)" }} >Peripherals</p>
+			<Typography variant="h5" textAlign="center" color="var(--white-2)" >
+				Peripherals
+			</Typography>
 		</>
 	);
 };

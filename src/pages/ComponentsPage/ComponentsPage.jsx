@@ -26,7 +26,9 @@ const ComponentsPage = () => {
 		<>
 			{ isDesktop && <HeaderDesktop	/>}
 			{!isDesktop && <HeaderMobile	/>}
-			<Typography variant="h4" textAlign="center" color="var(--white-2)" >Components page</Typography>			
+			<Typography variant="h5" textAlign="center" color="var(--white-2)" >
+				Components page
+			</Typography>			
 		</>
 	);
 };

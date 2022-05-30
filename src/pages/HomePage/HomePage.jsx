@@ -2,6 +2,8 @@ import React from 'react';
 
 
 //MATERIAL DESIGN
+//Components
+import Typography from '@mui/material/Typography';
 //Hooks
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -23,6 +25,9 @@ const HomePage = () => {
 		<>
 			{ isDesktop	&& <HeaderDesktop />}
 			{!isDesktop && <HeaderMobile	/>}
+			<Typography variant="h5" textAlign="center" color="var(--white-2)" >
+				Home page
+			</Typography>
 		</>
 	);
 };
