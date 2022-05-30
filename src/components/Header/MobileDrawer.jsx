@@ -37,7 +37,6 @@ const StyledDialog = styled(Dialog)({
 });
 
 const StyledNavLink = styled(NavLink)({
-	color: "white",
 	width: "100%"
 });
 
@@ -48,7 +47,8 @@ const MobileDrawer = ({closeDrawer}) => {
 	const [ t ] = useTranslation("global");
 	
 	const [ dialogStatus, setDialogStatus ] = useState(false);
-	
+
+
 	//Options array
 	const drawerOptionsLabel = [
 		t("header.nav.components.label"),
@@ -85,9 +85,11 @@ const MobileDrawer = ({closeDrawer}) => {
 				{drawerOptionsLabel.map( (element, index) => (
 					<ListItem  key={index} alignItems="center" >
 						<StyledNavLink to={`${drawerOptionsURL[index]}`} >
-							<ListItemButton sx={{ color:"var(--white-1)", textAlign: "center" }}  >
-								<ListItemText primary={element} />
-							</ListItemButton>
+							{({isActive}) => (
+								<ListItemButton sx={{ color: isActive ? "var(--cyan)" : "var(--white-1)", textAlign: "center" }}  >
+									<ListItemText primary={element} />
+								</ListItemButton>
+							)}
 						</StyledNavLink>
 					</ListItem>
 				) )}
