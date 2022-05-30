@@ -19,6 +19,8 @@ export const updateLanguage = (newLanguage) => {
 };
 
 
+
+
 //FOR LOCAL USE
 //Create a language key and set it 'en' (english)
 const createLanguage = () => {
