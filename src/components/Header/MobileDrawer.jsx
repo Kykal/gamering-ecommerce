@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 
+//React router
+import { NavLink } from 'react-router-dom';
+
+
 //react-i18next
 import { useTranslation } from 'react-i18next'; //To use internationalized strings
 
@@ -24,19 +28,16 @@ import { styled } from '@mui/material/styles';
 import SearchBar					from '../SearchBar';
 import MobileLanguageDialog	from './MobileLanguageDialog';
 
-//STYLED COMPONENTS
-const StyledLIT = styled(ListItemText)({
-	"& .MuiListItemText-primary": {
-		textAlign: "center",
-	},
-});
-
 
 const StyledDialog = styled(Dialog)({
 	"& .MuiDialog-paper": {
 		backgroundColor: "var(--black-2)",
 		color: "var(--white-1)"
 	},
+});
+
+const StyledNavLink = styled(NavLink)({
+	width: "100%"
 });
 
 
@@ -46,12 +47,19 @@ const MobileDrawer = ({closeDrawer}) => {
 	const [ t ] = useTranslation("global");
 	
 	const [ dialogStatus, setDialogStatus ] = useState(false);
-	
+
+
 	//Options array
-	const drawerOptions = [
-		t("header.nav.components"),
-		t("header.nav.accessories"),
-		t("header.nav.peripherals")
+	const drawerOptionsLabel = [
+		t("header.nav.components.label"),
+		t("header.nav.accessories.label"),
+		t("header.nav.peripherals.label")
+	];
+
+	const drawerOptionsURL = [
+		t("header.nav.components.url"),
+		t("header.nav.accessories.url"),
+		t("header.nav.peripherals.url")
 	];
 
 	const openLanguageDialog = () => {
@@ -74,16 +82,20 @@ const MobileDrawer = ({closeDrawer}) => {
 				<ListItem>
 					<SearchBar />
 				</ListItem>
-				{drawerOptions.map( (element, index) => (
+				{drawerOptionsLabel.map( (element, index) => (
 					<ListItem  key={index} alignItems="center" >
-						<ListItemButton >
-							<StyledLIT primary={element} />
-						</ListItemButton>
+						<StyledNavLink to={`${drawerOptionsURL[index]}`} >
+							{({isActive}) => (
+								<ListItemButton sx={{ color: isActive ? "var(--cyan)" : "var(--white-1)", textAlign: "center" }}  >
+									<ListItemText primary={element} />
+								</ListItemButton>
+							)}
+						</StyledNavLink>
 					</ListItem>
 				) )}
 				<ListItem disablePadding alignItems="center">
-					<ListItemButton onClick={openLanguageDialog} >
-						<StyledLIT primary={t("header.language")} sx={{ color:"var(--magenta)" }} />
+					<ListItemButton onClick={openLanguageDialog} sx={{ color:"var(--magenta)", textAlign: "center" }} >
+						<ListItemText primary={t("header.language")} />
 					</ListItemButton>
 				</ListItem>
 			</List>

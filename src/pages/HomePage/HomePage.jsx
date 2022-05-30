@@ -21,7 +21,7 @@ const HomePage = () => {
 	//Component render
 	return (
 		<>
-			{isDesktop	&& <HeaderDesktop />}
+			{ isDesktop	&& <HeaderDesktop />}
 			{!isDesktop && <HeaderMobile	/>}
 		</>
 	);
