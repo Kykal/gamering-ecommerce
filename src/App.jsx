@@ -4,7 +4,8 @@ import React from 'react';
 //React router
 import {
 	Route,
-	Routes
+	Routes,
+	Navigate
 } from 'react-router-dom';
 
 
@@ -26,12 +27,12 @@ const App = () => {
 	//Component render
 	return (
 		<Routes>
-			<Route path="/"				element={<HomePage			/>}	/>
-			<Route path="components"	element={<ComponentsPage	/>}	/>
-			<Route path="accessories"	element={<AccessoriesPage	/>}	/>
-			<Route path="peripherals"	element={<PeripheralsPage	/>}	/>
-			<Route path="search"			element={<SearchPage			/>}	/>
-			<Route path="*"				element={<PageNotFound		/>}	/>
+			<Route path="/"				element={<HomePage						/>}	/>
+			<Route path="components"	element={<ComponentsPage				/>}	/>
+			<Route path="accessories"	element={<AccessoriesPage				/>}	/>
+			<Route path="peripherals"	element={<PeripheralsPage				/>}	/>
+			<Route path="search"			element={<SearchPage						/>}	/>
+			<Route path="*"				element={<Navigate to="/" replace	/>}	/>
 		</Routes>
 	);
 };
