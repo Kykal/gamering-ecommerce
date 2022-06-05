@@ -12,6 +12,7 @@ import {
 //Pages
 import {
 	AccessoriesPage,
+	CartPage,
 	ComponentsPage,
 	HomePage,
 	PageNotFound,
@@ -32,6 +33,7 @@ const App = () => {
 			<Route path="accessories"	element={<AccessoriesPage				/>}	/>
 			<Route path="peripherals"	element={<PeripheralsPage				/>}	/>
 			<Route path="search"			element={<SearchPage						/>}	/>
+			<Route path="cart"			element={<CartPage						/>}	/>
 			<Route path="*"				element={<Navigate to="/" replace	/>}	/>
 		</Routes>
 	);

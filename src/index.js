@@ -11,6 +11,9 @@ import './index.css';
 import { checkLanguage } from './utils/languageUtils';
 
 
+//React / redux
+import { Provider as ReduxProvider } from 'react-redux';
+
 //React router
 import { BrowserRouter } from 'react-router-dom';
 
@@ -47,9 +50,11 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<I18nextProvider i18n={i18next} >
-				<Suspense fallback={<LoadingScreen />}>
-					<App />
-				</Suspense>
+				<ReduxProvider>
+					<Suspense fallback={<LoadingScreen />}>
+						<App />
+					</Suspense>
+				</ReduxProvider>
 			</I18nextProvider>
 		</BrowserRouter>
 	</React.StrictMode>
