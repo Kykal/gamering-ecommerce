@@ -13,6 +13,7 @@ An e-commerce webapp focused to buy PC components, accesories, peripherals and m
 - [Material-UI](https://mui.com/)
 - [i18Next](https://www.i18next.com/)
 - [React-Router](https://reactrouter.com/)
+- [Redux](https://redux.js.org/)
 # Color palette
 |Color name|Variable name|HEX|RGB|
 |-|-|-|-|
