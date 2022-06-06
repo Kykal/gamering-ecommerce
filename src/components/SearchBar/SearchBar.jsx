@@ -48,7 +48,7 @@ const StyledForm = styled('form')({
 
 
 //Main component content
-const SearchBar = () => {
+const SearchBar = ({closeDrawer}) => {
 	//To update URL
 	let navigate = useNavigate();
 	//Fetch translations
@@ -66,6 +66,7 @@ const SearchBar = () => {
 	//Starts a query
 	const doQuery = (event) => {
 		event.preventDefault();
+		closeDrawer();
 		
 		//If search has no value, do nothing
 		if(searchValue.length===0){

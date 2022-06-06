@@ -80,7 +80,7 @@ const MobileDrawer = ({closeDrawer}) => {
 			</Box>
 			<List>
 				<ListItem>
-					<SearchBar />
+					<SearchBar closeDrawer={closeDrawer} />
 				</ListItem>
 				{drawerOptionsLabel.map( (element, index) => (
 					<ListItem  key={index} alignItems="center" >
