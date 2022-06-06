@@ -24,7 +24,8 @@ import { styled } from '@mui/material/styles';
 
 
 //Custom components
-import MobileDrawer from './MobileDrawer';
+import CartButton		from './CartButton';
+import MobileDrawer	from './MobileDrawer';
 
 
 const Header = styled(AppBar)({
@@ -68,7 +69,9 @@ const HeaderMobile = () => {
 		<>
 			<Header position="static">
 				<Grid container spacing={0} height="4em" >
-					<Grid item xs={2} />
+					<Grid item xs={2} display="flex" justifyContent="center" alignItems="center" >
+						<CartButton />
+					</Grid>
 					<Grid item xs={8} display="flex" justifyContent="center" alignItems="center" >
 						<Link to="/">
 							<img

@@ -8,30 +8,30 @@ import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 
-//Custom components
+//Custom component
 import {
 	HeaderDesktop,
 	HeaderMobile
-} from '../../components/Header';
+} from '../../components/Header'
 
 
 //Main component content
-const PeripheralsPage = () => {
+const CartPage = () => {
 
 	const isDesktop = useMediaQuery('(min-width: 600px)');
 
-
+		
 	//Component render
 	return (
 		<>
-			{ isDesktop && <HeaderDesktop	/>}
-			{!isDesktop && <HeaderMobile	/>}
-			<Typography variant="h5" textAlign="center" color="var(--white-2)" >
-				Peripherals page
+			{ isDesktop && <HeaderDesktop	/> }
+			{!isDesktop && <HeaderMobile	/> }
+			<Typography variant="h5" textAlign="center" color="var(--white-1)" >
+				Cart page
 			</Typography>
 		</>
 	);
 };
 
 
-export default PeripheralsPage; //Export main component
+export default CartPage; //Export main component

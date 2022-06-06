@@ -33,7 +33,9 @@ const SearchPage = () => {
 		<>
 			{ isDesktop && <HeaderDesktop	/>}
 			{!isDesktop && <HeaderMobile	/>}
-			<p style={{ color:"var(--white-1)" }} >Search - {query}</p>
+			<Typography variant="h5" textAlign="center" color="var(--white-2)" >
+				Search - {query}
+			</Typography>
 		</>
 	);
 };

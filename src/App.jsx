@@ -1,4 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+
+//Redux
+import { fetchCartContentFromLocalStorage, fetchCartLengthFromLocalStorage } from './redux/slices/cart';
+import { useDispatch } from 'react-redux';
 
 
 //React router
@@ -12,9 +17,9 @@ import {
 //Pages
 import {
 	AccessoriesPage,
+	CartPage,
 	ComponentsPage,
 	HomePage,
-	PageNotFound,
 	PeripheralsPage,
 	SearchPage
 } from './pages';
@@ -22,6 +27,15 @@ import {
 
 //Main component content
 const App = () => {
+
+	const dispatch = useDispatch();
+	
+
+	//Before page loads, runs...
+	useEffect( () => {
+		dispatch( fetchCartContentFromLocalStorage() );
+		dispatch( fetchCartLengthFromLocalStorage() );
+	}, [dispatch] );
 
 
 	//Component render
@@ -32,6 +46,7 @@ const App = () => {
 			<Route path="accessories"	element={<AccessoriesPage				/>}	/>
 			<Route path="peripherals"	element={<PeripheralsPage				/>}	/>
 			<Route path="search"			element={<SearchPage						/>}	/>
+			<Route path="cart"			element={<CartPage						/>}	/>
 			<Route path="*"				element={<Navigate to="/" replace	/>}	/>
 		</Routes>
 	);
