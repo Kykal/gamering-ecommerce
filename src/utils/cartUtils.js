@@ -2,39 +2,38 @@ export const checkCart = () => {
 
 	const cart = readCart();
 
+	//If localStorage has no cart item...
 	if(cart===null){
-		createCart();
-		return readCart();
+		createCart(); //Create it
+		return checkCart(); //Call this function again
 	}
 
-	return cart
+	return JSON.parse(cart);
 }
 
 //
 const addItem = (newItem) => {
-
+	return;
 };
 
 const deleteItem = (deleteItem) => {
-
+	return;
 };
 
+//Get cart items length
+export const getCartLength = () => {
+	return JSON.parse(readCart()).length;
+};
 
 
 
 //LOCAL USE
 //Create cart
 const createCart = () => {
-	localStorage.setItem('cart', '');
+	localStorage.setItem('cart', '[]');
 };
 
-//Get cart items
+
 const readCart = () => {
-	const items = localStorage.getItem('cart');
-
-	if(items.length === 0){
-		return 0;
-	}
-
-	return JSON.parse(items);
-};
+	return localStorage.getItem('cart');
+}

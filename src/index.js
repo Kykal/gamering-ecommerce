@@ -11,8 +11,10 @@ import './index.css';
 import { checkLanguage } from './utils/languageUtils';
 
 
-//React / redux
-import { Provider as ReduxProvider } from 'react-redux';
+//Redux
+import { store } from './redux/store'; //States
+import { Provider as ReduxProvider } from 'react-redux'; //Redux states provider
+
 
 //React router
 import { BrowserRouter } from 'react-router-dom';
@@ -50,7 +52,7 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<I18nextProvider i18n={i18next} >
-				<ReduxProvider>
+				<ReduxProvider store={store} >
 					<Suspense fallback={<LoadingScreen />}>
 						<App />
 					</Suspense>

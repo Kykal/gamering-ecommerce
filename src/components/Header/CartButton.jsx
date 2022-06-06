@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
-//Utils
-import {
-	checkCart,
-	addItem
-} from '../../utils/cartUtils';
+//Redux
+import { useSelector } from 'react-redux';
 
 
 //React router
@@ -33,7 +30,10 @@ const StyledBadge = styled(Badge)({
 //Main component content
 const CartButton = () => {
 
-	const [ cartItems, setCartItems ] = useState(checkCart().length);
+	
+	//Get cart length from stored cart
+	const { length } = useSelector(state => state.cart);
+
 
 	//Component render
 	return (
@@ -41,7 +41,7 @@ const CartButton = () => {
 			{({isActive}) => (
 				<IconButton>
 					<StyledBadge 
-						badgeContent={cartItems} 
+						badgeContent={length}
 						max={9} 
 						sx={{ 
 							"& .MuiSvgIcon-root": {

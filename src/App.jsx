@@ -1,4 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+
+//Redux
+import { fetchCartContentFromLocalStorage, fetchCartLengthFromLocalStorage } from './redux/slices/cart';
+import { useDispatch } from 'react-redux';
 
 
 //React router
@@ -15,7 +20,6 @@ import {
 	CartPage,
 	ComponentsPage,
 	HomePage,
-	PageNotFound,
 	PeripheralsPage,
 	SearchPage
 } from './pages';
@@ -23,6 +27,15 @@ import {
 
 //Main component content
 const App = () => {
+
+	const dispatch = useDispatch();
+	
+
+	//Before page loads, runs...
+	useEffect( () => {
+		dispatch( fetchCartContentFromLocalStorage() );
+		dispatch( fetchCartLengthFromLocalStorage() );
+	}, [dispatch] );
 
 
 	//Component render
