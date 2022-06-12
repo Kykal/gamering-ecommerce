@@ -47,7 +47,7 @@ const ItemsShowMobile = () => {
 
 	//User filter list
 	const [ activeFilters, setActiveFilters ] = useState([
-		"Intel", "AMD", "PNY"
+		
 	]);
 
 
