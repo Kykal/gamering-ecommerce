@@ -1,0 +1,104 @@
+[
+	{
+		"id": 0,
+		"name": "Intel Core i5-9600K",
+		"manufacturer": "Intel",
+		"price": 260,
+		"img": "https://cdn.discordapp.com/attachments/577645288240578572/984241974703964160/unknown.png",
+		"tag": [
+			"intel",
+			"core",
+			"i5"
+		]
+	},
+	{
+		"id": 1,
+		"name": "ASUS ROG Strix BF450-F Gaming II",
+		"manufacturer": "ASUS",
+		"price": 309,
+		"img": "https://cdn.discordapp.com/attachments/577645288240578572/985589676951867462/unknown.png",
+		"tag": [
+			"asus",
+			"rog",
+			"strix"
+		]
+	},
+	
+	{
+		"id": 2,
+		"name": "GIGABYTE GeForce RTX 2080 Ti Gaming OC",
+		"manufacturer": "GIGABYTE",
+		"price": 1041.04,
+		"img": "https://cdn.discordapp.com/attachments/577645288240578572/985588509312188416/unknown.png",
+		"tag": [
+			"gigabyte",
+			"geforce",
+			"rtx",
+			"2080",
+			"gaming"
+		]
+	},
+	{
+		"id": 3,
+		"name": "Intel Core i9-12900E",
+		"manufacturer": "Intel",
+		"price": 494,
+		"img": "https://cdn.discordapp.com/attachments/577645288240578572/984267919963869225/unknown.png",
+		"tag": [
+			"intel",
+			"core",
+			"i9"
+		]
+	},
+	{
+		"id": 4,
+		"name": "AMD Ryzen 5 5600X",
+		"manufacturer": "AMD",
+		"price": 134.98,
+		"img": "https://cdn.discordapp.com/attachments/577645288240578572/985578429812441088/unknown.png",
+		"tag": [
+			"amd",
+			"ryzen"
+		]
+	},
+	{
+		"id": 5,
+		"name": "PNY NVIDIA Quadro K5200",
+		"manufacturer": "PNY",
+		"price": 638.99,
+		"img": "https://cdn.discordapp.com/attachments/577645288240578572/985589008467902464/unknown.png",
+		"tag": [
+			"pny",
+			"nvidia",
+			"quadro"
+		]
+	},
+	{
+		"id": 6,
+		"name": "AMD Ryzen Threadripper 3970X",
+		"manufacturer": "AMD",
+		"price": 3279.23,
+		"img": "https://cdn.discordapp.com/attachments/577645288240578572/985578581281341440/unknown.png",
+		"tag": [
+			"amd",
+			"ryzen",
+			"threadripper"
+		]
+	},
+	{
+		"id": 7,
+		"name": "Cooler Master Hyper 212 RGB Black Edition",
+		"manufacturer": "Cooler Master",
+		"price": 90.98,
+		"img": "https://cdn.discordapp.com/attachments/577645288240578572/985590151558348860/unknown.png",
+		"tag": [
+			"cooler",
+			"master",
+			"hyper",
+			"212",
+			"rgb",
+			"black",
+			"edition"
+		]
+	}
+]
