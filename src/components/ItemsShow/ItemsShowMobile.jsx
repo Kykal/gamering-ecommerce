@@ -50,6 +50,8 @@ const ItemsShowMobile = () => {
 		
 	]);
 
+	const [ activeFiltersIndex, setActiveFiltersIndex ] = useState([]);
+
 
 	useEffect( () => {
 		//'Fetch' data from web
@@ -62,6 +64,26 @@ const ItemsShowMobile = () => {
 	//Description. What does this?
 	const filterButtonHandler = () => {
 		setFilterButtonStatus(!filterButtonStatus);
+	};
+
+	//Description. What does this?
+	const filtersOptionsHandler = (value, element) => () => {
+		//For index
+		const currentIndex = activeFiltersIndex.indexOf(value);
+		const newChecked = [...activeFiltersIndex];
+		//For label
+		const newLabel = [...activeFilters];
+
+		if( currentIndex === -1 ){
+			newChecked.push(value);
+			newLabel.push(element);
+		} else {
+			newChecked.splice(currentIndex, 1);
+			newLabel.splice(currentIndex, 1);
+		}
+
+		setActiveFilters(newLabel);
+		setActiveFiltersIndex(newChecked);
 	};
 
 	//Component render
@@ -81,11 +103,23 @@ const ItemsShowMobile = () => {
 						<Grid item xs={4} >
 							<Typography variant="subtitle2" color="var(--white-2)" >Manufacturer</Typography>
 							<List dense disablePadding >
-								{['AMD', 'Intel', 'Nvidia'].map( (element, index) => (
+								{['AMD', 'Intel', 'NVIDIA'].map( (element, index) => (
 									<ListItem key={index} dense disableGutters disablePadding >
-										<ListItemButton role={undefined} dense>
-											<ListItemIcon>
-												<Checkbox edge="start"  />
+										<ListItemButton dense onClick={filtersOptionsHandler(index, element)} >
+											<ListItemIcon >
+												<Checkbox
+													name={element}
+													checked={activeFiltersIndex.indexOf(index) !== -1 }
+													sx={{ 
+														color:"var(--white-2)",
+														"&.Mui-checked": {
+															color: "var(--magenta)"
+														},
+													}}
+													edge="start"
+													disableRipple
+													tabIndex={-1}
+												/>
 											</ListItemIcon>
 											<ListItemText primary={element} />
 										</ListItemButton>
