@@ -18,7 +18,7 @@ import {
 //Main component content
 const HomePage = () => {
 
-	const isDesktop = useMediaQuery('(min-width: 600px)');
+	const isDesktop = useMediaQuery( '(min-width: 600px)' );
 
 	//Component render
 	return (
