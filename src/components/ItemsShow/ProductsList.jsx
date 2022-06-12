@@ -29,7 +29,12 @@ const Icon = styled(IconButton)({
 const ProductsList = ({products, filters}) => {
 
 	//Filter our products if some of them has an active filter value on its name.
-	const filteredProducts = products.filter( product => filters.some( filter => product.name.includes(filter) ));
+	let filteredProducts = products.filter( product => filters.some( filter => product.name.includes(filter) ));
+
+	//If there are no filters, then filtered products as products
+	if( filters.length === 0 ){
+		filteredProducts = products;
+	}
 	
 
 	//Component render
