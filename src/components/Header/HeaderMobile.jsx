@@ -67,7 +67,7 @@ const HeaderMobile = () => {
 	//Component render
 	return (
 		<>
-			<Header position="static">
+			<Header position="sticky">
 				<Grid container spacing={0} height="4em" >
 					<Grid item xs={2} display="flex" justifyContent="center" alignItems="center" >
 						<CartButton />
@@ -97,7 +97,6 @@ const HeaderMobile = () => {
 				anchor="right"
 				open={drawerStatus}
 				onClose={closeDrawer}
-				component="nav"
 			>
 				<MobileDrawer closeDrawer={closeDrawer} />
 			</StyledDrawer>
