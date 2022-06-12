@@ -78,7 +78,7 @@ const MobileDrawer = ({closeDrawer}) => {
 					<ChevronRightIcon fontSize="inherit" />
 				</IconButton>
 			</Box>
-			<List>
+			<List component="nav">
 				<ListItem>
 					<SearchBar closeDrawer={closeDrawer} />
 				</ListItem>
