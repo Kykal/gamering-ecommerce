@@ -1,8 +1,15 @@
 import React, { useEffect } from 'react';
 
 
+//axios
+import axios from 'axios';
+
+
 //Redux
-import { fetchCartContentFromLocalStorage, fetchCartLengthFromLocalStorage } from './redux/slices/cart';
+import { 
+	fetchCartContentFromLocalStorage, 
+	fetchCartLengthFromLocalStorage 
+} from './features/cart';
 import { useDispatch } from 'react-redux';
 
 
@@ -21,6 +28,7 @@ import {
 	ComponentsPage,
 	HomePage,
 	PeripheralsPage,
+	ProductPage,
 	SearchPage
 } from './pages';
 
@@ -41,13 +49,16 @@ const App = () => {
 	//Component render
 	return (
 		<Routes>
-			<Route path="/"				element={<HomePage						/>}	/>
-			<Route path="components"	element={<ComponentsPage				/>}	/>
-			<Route path="accessories"	element={<AccessoriesPage				/>}	/>
-			<Route path="peripherals"	element={<PeripheralsPage				/>}	/>
-			<Route path="search"			element={<SearchPage						/>}	/>
-			<Route path="cart"			element={<CartPage						/>}	/>
-			<Route path="*"				element={<Navigate to="/" replace	/>}	/>
+			<Route path="/"				 element={<HomePage							/>}	/>
+			<Route path="components"	 element={<ComponentsPage					/>}	/>
+			<Route path="accessories"	 element={<AccessoriesPage					/>}	/>
+			<Route path="peripherals"	 element={<PeripheralsPage					/>}	/>
+			<Route path="search"			 element={<SearchPage						/>}	/>
+			<Route path="cart"			 element={<CartPage							/>}	/>
+			<Route path="product" exact element={<ProductPage						/>}	>
+				<Route path=":id"			 element={<span>Test</span>}	/>
+			</Route>
+			<Route path="*"				 element={<Navigate to="/" replace		/>}	/>
 		</Routes>
 	);
 };
