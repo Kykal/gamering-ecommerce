@@ -23,5 +23,6 @@ a {
 }
 
 html, body {
+	color: var(--white-2);
 	background-color: var(--black-2);	
 }
