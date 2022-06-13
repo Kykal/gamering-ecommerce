@@ -30,6 +30,7 @@
 		}
 	},
 	"components": {
+		"label": "Components",
 		"manufacturer": "Manufacturer"
 	}
 }

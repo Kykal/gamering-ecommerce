@@ -97,7 +97,7 @@ const ItemsShowMobile = () => {
 		<Container component="main" sx={{ paddingTop: "1.25em", paddingBottom: "1.25em" }} >
 			<Grid container spacing={0} paddingBottom="1em" >
 				<Grid item xs={10} display="flex" justifyContent="flex-start" alignItems="center" >
-					<Typography variant="h5" color="var(--white-2)" >Components</Typography>
+					<Typography variant="h5" color="var(--white-2)" >{t("components.label")}</Typography>
 				</Grid>
 				<Grid item xs={2} display="flex" justifyContent="flex-end" alignItems="center" >
 					<Icon onClick={filterButtonHandler} >
