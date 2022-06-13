@@ -3,7 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 
 //Import reducers
-import cart from "./slices/cart";
+import cart from "./features/cart";
 
 
 //Set all slices in reducer class property

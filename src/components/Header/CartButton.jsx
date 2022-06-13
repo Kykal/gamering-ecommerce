@@ -32,7 +32,7 @@ const CartButton = () => {
 
 	
 	//Get cart length from stored cart
-	const { length } = useSelector(state => state.cart);
+	const cartLength = useSelector(state => state.cart.length);
 
 
 	//Component render
@@ -41,7 +41,7 @@ const CartButton = () => {
 			{({isActive}) => (
 				<IconButton>
 					<StyledBadge 
-						badgeContent={length}
+						badgeContent={cartLength}
 						max={9} 
 						sx={{ 
 							"& .MuiSvgIcon-root": {

@@ -2,7 +2,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 //Utils
-import { checkCart, getCartLength } from "../../utils/cartUtils";
+import { checkCart, getCartLength } from "../utils/cartUtils";
 
 
 export const cartSlice = createSlice({
@@ -22,12 +22,19 @@ export const cartSlice = createSlice({
 		setCartLength:		(state, action) => {
 			state.length = action.payload
 		},
+		addItemCart:		(state, action) => {
+			state.content.push( action.payload )
+		},
 	},
 });
 
 
 //Export actions to use somewhere else
-export const { setCartContent, setCartLength } = cartSlice.actions;
+export const {
+	setCartContent,
+	setCartLength,
+	addItemCart
+} = cartSlice.actions;
 
 
 //Export reducer to declare in store.js
@@ -46,4 +53,11 @@ export const fetchCartLengthFromLocalStorage = () => (dispatch) => {
 	const cartLength = getCartLength();
 
 	dispatch( setCartLength(cartLength) );
+};
+
+export const addItemToCart = () => (dispatch) => {
+	
+
+
+
 };

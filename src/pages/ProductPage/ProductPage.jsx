@@ -1,11 +1,15 @@
 import React from 'react';
 
 
+
+//React router
+import { Outlet } from 'react-router-dom';
+
+
 //MATERIAL DESIGN
-//Components
-import Typography from '@mui/material/Typography';
-//Hooks
+//Hook
 import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 
 //Custom components
@@ -15,22 +19,20 @@ import {
 } from '../../components/Header';
 
 
+
 //Main component content
-const HomePage = () => {
+const ProductPage = () => {
 
 	const isDesktop = useMediaQuery( '(min-width: 600px)' );
 
 	//Component render
 	return (
 		<>
-			{ isDesktop	&& <HeaderDesktop />}
-			{!isDesktop && <HeaderMobile	/>}
-			<Typography variant="h5" textAlign="center" color="var(--white-2)" >
-				Home page
-			</Typography>
+			{ isDesktop && <HeaderDesktop /> }
+			{!isDesktop && <HeaderMobile /> }
 		</>
 	);
 };
 
 
-export default HomePage; //Export main component
+export default ProductPage; //Export main component

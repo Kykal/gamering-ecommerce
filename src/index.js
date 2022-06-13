@@ -12,8 +12,8 @@ import { checkLanguage } from './utils/languageUtils';
 
 
 //Redux
-import { store } from './redux/store'; //States
 import { Provider as ReduxProvider } from 'react-redux'; //Redux states provider
+import { store } from './store'; //States
 
 
 //React router

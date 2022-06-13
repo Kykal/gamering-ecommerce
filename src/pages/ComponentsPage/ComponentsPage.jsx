@@ -2,8 +2,6 @@ import React from 'react';
 
 
 //MATERIAL DESIGN
-//Components
-import Typography from '@mui/material/Typography';
 //Hooks
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -13,6 +11,10 @@ import {
 	HeaderDesktop,
 	HeaderMobile
 } from '../../components/Header';
+import {
+	ItemsShowDesktop,
+	ItemsShowMobile,
+} from '../../components/ItemsShow';
 
 
 //Main component content
@@ -24,11 +26,20 @@ const ComponentsPage = () => {
 	//Component render
 	return (
 		<>
-			{ isDesktop && <HeaderDesktop	/>}
-			{!isDesktop && <HeaderMobile	/>}
-			<Typography variant="h5" textAlign="center" color="var(--white-2)" >
-				Components page
-			</Typography>			
+
+			{ isDesktop && (
+				<>
+					<HeaderDesktop		/>
+					<ItemsShowDesktop />
+				</>
+			)}
+
+			{!isDesktop && (
+				<>
+					<HeaderMobile		/>
+					<ItemsShowMobile	/>
+				</>
+			)}
 		</>
 	);
 };
