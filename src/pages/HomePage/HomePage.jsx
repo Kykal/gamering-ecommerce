@@ -31,7 +31,7 @@ const HomePage = () => {
 				Home page
 			</Typography>
 			<Box textAlign="center" >
-				<Button variant="contained" onClick={ () => localStorage.clear() } >
+				<Button variant="contained" onClick={() => localStorage.clear()} >
 					Clear localStorage
 				</Button>
 			</Box>
