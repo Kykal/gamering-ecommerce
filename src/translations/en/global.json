@@ -28,5 +28,8 @@
 				"value": "es"
 			}
 		}
+	},
+	"components": {
+		"manufacturer": "Manufacturer"
 	}
 }

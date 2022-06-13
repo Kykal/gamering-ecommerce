@@ -3,6 +3,9 @@ import React, { useState, useEffect, Suspense, lazy } from 'react';
 //axios
 import axios from 'axios';
 
+//i18
+import { useTranslation } from 'react-i18next';
+
 
 //MATERIAL DESIGN
 //Components
@@ -38,6 +41,9 @@ const Icon = styled(IconButton)({
 
 //Main component content
 const ItemsShowMobile = () => {
+
+	//Translations
+	const [ t ] = useTranslation("global");
 
 	//To save fetched data
 	const [ fetchData, setFetchData ] = useState([]);
@@ -101,9 +107,9 @@ const ItemsShowMobile = () => {
 				{filterButtonStatus && (
 					<Grid item container xs={12} display="flex" justifyContent="flex-start" alignItems="center" >
 						<Grid item xs={4} >
-							<Typography variant="subtitle2" color="var(--white-2)" >Manufacturer</Typography>
+							<Typography variant="subtitle2" color="var(--white-2)" >{t("components.manufacturer")}</Typography>
 							<List dense disablePadding >
-								{['AMD', 'Intel', 'NVIDIA'].map( (element, index) => (
+								{['AMD', 'Intel', 'PNY'].map( (element, index) => (
 									<ListItem key={index} dense disableGutters disablePadding >
 										<ListItemButton dense onClick={filtersOptionsHandler(index, element)} >
 											<ListItemIcon >

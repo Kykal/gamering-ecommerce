@@ -1,5 +1,8 @@
 import React from 'react';
 
+//i18
+import { useTranslation } from 'react-i18next';
+
 
 //React router
 import { Link } from 'react-router-dom';
@@ -28,6 +31,9 @@ const Icon = styled(IconButton)({
 //Main component content
 const ProductsList = ({products, filters}) => {
 
+	//Translations
+	const [ t, i18n ] = useTranslation("global");
+
 	//Filter our products if some of them has an active filter value on its name.
 	let filteredProducts = products.filter( product => filters.some( filter => product.name.includes(filter) ));
 
@@ -42,11 +48,14 @@ const ProductsList = ({products, filters}) => {
 		<>
 			{filteredProducts.map( element => (
 				<ImageListItem key={element.id} >
-					<img src={element.img} alt={`${element.name}`} loading="lazy"/>
+					<img src={element.img} alt={`${element.name}`} loading="lazy" />
 
 					<ImageListItemBar
 						title={element.name}
-						subtitle={`\$${element.price} USD`}
+						subtitle={
+							i18n.language === "en" ? 
+							`\$${(element.price).toFixed(2)} USD` : `\$${(element.price * 20).toFixed(2)} MXN`
+						}
 						position="bottom"
 
 						actionIcon={
