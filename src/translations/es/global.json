@@ -32,5 +32,11 @@
 	"components": {
 		"label": "Componentes",
 		"manufacturer": "Fabricante"
+	},
+	"accessories": {
+		"label": "Accesorios"
+	},
+	"peripherals": {
+		"label": "Periféricos"
 	}
 }

@@ -32,5 +32,11 @@
 	"components": {
 		"label": "Components",
 		"manufacturer": "Manufacturer"
+	},
+	"accessories": {
+		"label": "Accessories"
+	},
+	"peripherals": {
+		"label": "Peripherals"
 	}
 }
