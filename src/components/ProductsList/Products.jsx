@@ -8,12 +8,6 @@ import Product from './Product';
 //Main component content
 const Products = ({products, language}) => {
 
-	React.useEffect( () => {
-		setTimeout( () => {
-
-		}, 3_000 );
-	}, [] );
-
 	//Component render
 	return (
 		<>
