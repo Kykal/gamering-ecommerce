@@ -35,27 +35,37 @@ const ComponentsPage = () => {
 
 	//To store fetched data from web
 	const [ data, setData ] = useState([]);
+	const [ filteredData, setFilteredData ] = useState([]);
+	//Filters list
+	const [ filtersLabels, setFiltersLabels ] = useState([]);
 
 	//Web responsivement
 	const isDesktop = useMediaQuery( '(min-width: 600px)' );
 
-	//Filters list
-	const filtersLabels = [
-		"AMD",
-		"ASUS",
-		"Cooler Master",
-		"Corsair",
-		"GIGABYTE",
-		"Intel",
-		"PNY"
-	];
-
+	
 	useEffect( () => {
 		axios.get('components.json')
-			.then( response => setData(response.data) )
-			.catch( error => console.log( error ) )
-	}, [] );
+		.then( response => {
+			//Save response data
+			const products = response.data;
+						
+			let filters = [];
+			//Push manufacturer names into filters array
+			for( let i=0; i<products.length; i++ ){
+				const manufacturer = products[i].manufacturer;
+				filters.push(manufacturer);
+			}
 
+			filters = [...new Set(filters)]; //Turn temporary filters array into a Set to remove duplicates.
+			filters.sort(); //Sort in alpabetical order
+
+			//Update states
+			setData(products);
+			setFilteredData(products)
+			setFiltersLabels(filters);
+		} )
+		.catch( error => console.log( error ) )
+	}, [] );
 	
 	//Component render
 	return (
@@ -66,6 +76,7 @@ const ComponentsPage = () => {
 					<HeaderDesktop	/>
 					<ProductsListDesktop 
 						products={data} 
+						filteredProducts={filteredData}
 						filtersLabels={filtersLabels} 
 						label={t("components.label")}
 						language={i18n.language}
@@ -76,9 +87,10 @@ const ComponentsPage = () => {
 			{!isDesktop && (
 				<>
 					<HeaderMobile />
-					<Container maxWidth="lg" >
+					<Container maxWidth="lg" component="main" >
 						<ProductsListMobile	
 							products={data} 
+							filteredProducts={filteredData}
 							filtersLabels={filtersLabels} 
 							label={t("components.label")}
 							language={i18n.language}
