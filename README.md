@@ -1,7 +1,9 @@
 [![React](https://img.shields.io/badge/1.18.1-61DAFB?style=for-the-badge&logo=react&label=React&labelColor=20232A)](https://reactjs.org/) [![Material-UI](https://img.shields.io/badge/5.7.0-0081CB?style=for-the-badge&logo=mui&label=Material-UI&labelColor=FFFFFF)](https://mui.com/) [![i18next](https://img.shields.io/badge/21.8.3-26A699?style=for-the-badge&logo=i18next&label=i18next&labelColor=FFFFFF)](https://www.i18next.com/) [![react-router](https://img.shields.io/badge/6.3.0-CE0C1B?style=for-the-badge&logo=react-router&label=react-router&labelColor=121212)](https://reactrouter.com/)  [![redux](https://img.shields.io/badge/4.2.0-2C2C2C?style=for-the-badge&logo=Redux&label=Redux&labelColor=7646BA)](https://redux.js.org/)
 						
 # Gamering | E-commerce
-An e-commerce webapp, where you can look up for PC components, accesories and peripherals; add them to your cart and "purchase" them. 
+An e-commerce webapp, where you can look up for PC components, accesories and peripherals; add them to your cart and "purchase" them.
+# Note
+Developing focused on mobiles, later on desktops. If you want to test it must: or use a mobile device or use Responsive Design Mode for desktop.
 - - -
 # Content
 1. [Libraries](#libraries)
