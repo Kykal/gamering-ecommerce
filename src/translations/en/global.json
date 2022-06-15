@@ -30,13 +30,13 @@
 		}
 	},
 	"components": {
-		"label": "Components",
-		"manufacturer": "Manufacturer"
+		"label": "Components"
 	},
 	"accessories": {
 		"label": "Accessories"
 	},
 	"peripherals": {
 		"label": "Peripherals"
-	}
+	},
+	"manufacturer": "Manufacturer"
 }
