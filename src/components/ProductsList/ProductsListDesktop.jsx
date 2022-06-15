@@ -2,7 +2,7 @@ import React from 'react';
 
 
 //Main component content
-const ItemsShowDesktop = () => {
+const ProductsListDesktop = () => {
 
 
 	//Component render
@@ -14,4 +14,4 @@ const ItemsShowDesktop = () => {
 };
 
 
-export default ItemsShowDesktop; //Export main component
+export default ProductsListDesktop; //Export main component
