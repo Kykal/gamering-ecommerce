@@ -1,6 +1,14 @@
 import React from 'react';
 
 
+//Utils
+import { validateURL } from '../../utils/queryUtils';
+
+
+//React router
+import { useNavigate } from 'react-router-dom';
+
+
 //MATERIAL DESIGN
 //Components
 import ImageListItem			from '@mui/material/ImageListItem';
@@ -21,6 +29,15 @@ const StyledButton = styled(IconButton)({
 //Main component content
 const Product = ({product, language}) => {
 
+	//React router - To send to another URL
+	const navigate = useNavigate();
+
+	//Send user to products page (URL)
+	const sendToProduct = () => {
+		//Change blank spaces with plus signs
+		const url = validateURL(`${product.manufacturer} ${product.name}`);
+		navigate(`/product/${url}`)
+	};
 
 	//Component render
 	return (
@@ -28,11 +45,11 @@ const Product = ({product, language}) => {
 			<img src={product.img} alt={product.name} loading="lazy" />
 
 			<ImageListItemBar
-				title={product.name}
+				title={`${product.manufacturer} ${product.name}`}
 				subtitle={ language==="en" ? `\$${product.price} USD` : `\$${(product.price * 19.50)} MXN` }
 
 				actionIcon={
-					<StyledButton>
+					<StyledButton onClick={sendToProduct} >
 						<InfoIcon />
 					</StyledButton>
 				}
