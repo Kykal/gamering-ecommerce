@@ -12,5 +12,27 @@
 			"anti",
 			"pop"
 		]
+	},
+	{
+		"id": 1,
+		"name": "TH106",
+		"manufacturer": "ZRAMO",
+		"price": 11.99,
+		"img": "https://cdn.discordapp.com/attachments/985700726833557524/986503068239679558/zramo_th106.png",
+		"tag": [
+			"zramo",
+			"th106"
+		]
+	},
+	{
+		"id": 2,
+		"name": "STAND-V002",
+		"manufacturer": "VIVO",
+		"price": 34.99,
+		"img": "https://cdn.discordapp.com/attachments/985700726833557524/986503860065533982/vivo_stand-v002.png",
+		"tag": [
+			"zramo",
+			"th106"
+		]
 	}
 ]
