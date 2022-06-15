@@ -31,24 +31,38 @@ import {
 const AccessoriesPage = () => {
 
 	//Translations
-	const [ t ] = useTranslation("global");
+	const [ t, i18n ] = useTranslation("global");
 
 	//To store fetched data from web
 	const [ data, setData ] = useState([]);
-
-	//Filter lists
-	const filterLabels = [
-		"NEEWER",
-		"LyxPro",
-		"Redlemon"
-	];
+	const [ filteredData, setFilteredData ] = useState([]);
+	const [ filtersLabels, setFiltersLabels ] = useState([]);
 
 	//Web responsivement
 	const isDesktop = useMediaQuery('(min-width: 600px)');
 
 	useEffect( () => {
 		axios.get('accessories.json')
-			.then( response => setData(response.data) )
+			.then( response => {
+				
+				//Save products from response data
+				const products = response.data;
+
+				let filters = [];
+
+				for( let i=0; i<products.length; i++ ){
+					const manufacturer = products[i].manufacturer;
+					filters.push(manufacturer);
+				}
+
+				filters = [...new Set(filters)];
+				filters.sort();
+				
+				
+				//Update state
+				setData(response.data);
+				setFiltersLabels(filters);
+			} )
 			.catch( error => console.log( error ) )
 	}, [] );
 	
@@ -62,8 +76,10 @@ const AccessoriesPage = () => {
 					<Container maxWidth="lg">
 						<ProductsListDesktop
 							products={data}
-							filterLabels={filterLabels}
+							filteredProducts={filteredData}
+							filtersLabels={filtersLabels}
 							label={t("accessories.label")}
+							language={i18n.language}
 						/>
 					</Container>
 				</>
@@ -75,8 +91,10 @@ const AccessoriesPage = () => {
 					<Container maxWidth="lg">
 						<ProductsListMobile
 							products={data}
-							filterLabels={filterLabels}
+							filteredProducts={filteredData}
+							filtersLabels={filtersLabels}
 							label={t("accessories.label")}
+							language={i18n.language}
 						/>
 					</Container>
 				</>
