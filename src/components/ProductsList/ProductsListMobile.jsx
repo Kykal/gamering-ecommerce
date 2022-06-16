@@ -1,152 +1,141 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 
-//Translations
+
+//i18n
 import { useTranslation } from 'react-i18next';
+
+//axios
+import axios from 'axios';
 
 
 //MATERIAL DESIGN
 //Components
-import Grid						from '@mui/material/Grid';
-import List						from '@mui/material/List';
-import ListItem				from '@mui/material/ListItem';
-import ListItemButton		from '@mui/material/ListItemButton';
-import ListItemIcon			from '@mui/material/ListItemIcon';
-import ListItemText			from '@mui/material/ListItemText';
-import Checkbox				from '@mui/material/Checkbox';
-import IconButton				from '@mui/material/IconButton';
-import ImageList				from '@mui/material/ImageList';
-import Typography				from '@mui/material/Typography';
+import Container			from '@mui/material/Container';
+import Grid					from '@mui/material/Grid';
+import Typography			from '@mui/material/Typography';
+import ImageList			from '@mui/material/ImageList';
+import IconButton			from '@mui/material/IconButton';
 //Icons
-import FilterListIcon		from '@mui/icons-material/FilterList';
-import FilterListOffIcon	from '@mui/icons-material/FilterListOff';
-//Styles
-import { styled }				from '@mui/material/styles';
+import FilterAltIcon		from '@mui/icons-material/FilterAlt';
+import FilterAltOffIcon	from '@mui/icons-material/FilterAltOff';
 
 
 //Custom components
+import FilterLabels		from './FilterLabels';
 import ProductsSkeleton from './ProductsSkeleton';
-const Products = lazy( () => import('./Products') );
-
-
-const StyledButton = styled(IconButton)({
-	"& .MuiSvgIcon-root": {
-		color: "var(--white-2)"
-	}
-});
-
+const	 Products = lazy( () => import('./Products') );
 
 //Main component content
-const ProductsListMobile = ({ products, filteredProducts, filtersLabels, label, language }) => {
+const ProductsListMobile = (props) => {
 
-	//Translation
+	//Translations
 	const [ t ] = useTranslation("global");
 
-
-	const [ activeFilters, setActiveFilters ] = useState([]);
-	const [ showFilters, setShowFilters ] = useState(false);
-
-	//Renders filters list
-	const filterButtonHandler = () => {
-		setShowFilters( !showFilters );
-	};
-
-	const filtersLabelsHalfLength = Math.ceil(filtersLabels.length/2); //Get a half number of array
-	const filtersFirstHalf	= filtersLabels.slice( 0, filtersLabelsHalfLength ); //Slice from beginning to half
-	const filtersSecondHalf	= filtersLabels.slice( -(filtersLabelsHalfLength-1) ); //Slice the rest (from half to end)
-
 	
+	//List of fetched products
+	const [ products, setProducts ] = useState([]);
+	const [ auxiliaryProducts, setAuxiliaryProducts ] = useState([]); //An auxiliary that save original array
+	//Defines if filters will render or not
+	const [ filterStatus, setFilterStatus ] = useState(false);
+	//List of filters
+	const [ filtersList, setFiltersList ] = useState([]);
+	//Current active filters (its label and index)
+	const [ activeFilters, setActiveFilters ] = useState({
+		index: [],
+		labels: []
+	});
 
 
-	//Manages checkbox states
-	const filtersToggleHandler = (value) => () => {
-		const currentIndex = activeFilters.indexOf(value);
-		const newChecked = [...activeFilters];
+	//Fetch data
+	useEffect( () => {
+		axios.get(`${props.uri}.json`)
+			.then( response => {
+				const fetchedProducts = response.data;
 
-		if( currentIndex === -1 ){
-			newChecked.push(value);
-		}else{
-			newChecked.splice(currentIndex, 1);
+				//Make a temporal list to save manufacturers as filters
+				let tempFiltersList = [];
+				for( let i=0; i<fetchedProducts.length; i++ ){
+					tempFiltersList.push( fetchedProducts[i].manufacturer );
+				}
+
+				tempFiltersList = [...new Set(tempFiltersList)]; //Remove duplicates by temporal declaring as Set
+				tempFiltersList.sort(); //Sort by alphabet
+
+				//Save state
+				setFiltersList(tempFiltersList);
+				setAuxiliaryProducts(fetchedProducts);
+				setProducts(fetchedProducts);	
+			} )
+			.catch( error => console.log(error) );
+	}, [] ); //Do once
+
+	//When activeFilters has an update...
+	useEffect( () => {
+		//Grab auxiliary all products.
+		let newProducts = auxiliaryProducts;
+
+		//If there is no filter, reset products listing
+		if( activeFilters.labels.length === 0 ){
+			setProducts(newProducts);
+			return;
 		}
 
-		setActiveFilters(newChecked);
+		//Filter all products with active filters
+		newProducts = newProducts.filter( product => activeFilters.labels.some( label => product.manufacturer === label ));
+
+		//Update state 
+		setProducts(newProducts);
+	}, [activeFilters] );
+
+	//Enable/Disable filters labels render
+	const filterButtonHandler = () => {
+		setFilterStatus(!filterStatus);
+	};
+
+	const updateActiveFilters = (newIndex, newLabel) => {
+		setActiveFilters({
+			index: newIndex,
+			labels: newLabel
+		});
 	};
 
 	//Component render
 	return (
-		<>
-			<Grid container spacing={0} paddingTop="1em" paddingBottom="1em" >
-				<Grid item xs={10} display="flex" justifyContent="flex-start" alignItems="center" >
-					<Typography variant="h5" >{label}</Typography>
+		<Container maxWidth="lg" component="main">
+			<Grid container spacing={0} paddingTop="1.25em" paddingBottom="1em" >
+				<Grid item xs={10} display="flex" alignItems="center" justifyContent="flex-start" >
+					<Typography variant="h5" >{t(`${props.uri}.label`)}</Typography>
 				</Grid>
-				<Grid item xs={2} display="flex" justifyContent="flex-end" alignItems="center" >
-					<StyledButton onClick={filterButtonHandler} >
-						{showFilters ? <FilterListOffIcon /> : <FilterListIcon /> }
-					</StyledButton>
+				<Grid item xs={2} display="flex" alignItems="center" justifyContent="flex-end" >
+					<IconButton onClick={filterButtonHandler} >
+						{ filterStatus ? (
+							<FilterAltOffIcon sx={{ color: "var(--magenta)" }} />
+						) : (		
+							<FilterAltIcon sx={{ color:"var(--white-2)" }} />
+						)}
+					</IconButton>
 				</Grid>
-				{showFilters &&				
-					<Grid item container xs={12} spacing={0}>
-						<Grid item xs={12} >
+				{filterStatus && (
+					<>
+						<Grid item xs={12}>
 							<Typography variant="subtitle1" >{t("manufacturer")}</Typography>
 						</Grid>
-						<Grid item xs={6}>
-							<List>
-								{filtersFirstHalf.map( (filter, index) => (
-									<ListItem key={index} disablePadding >
-										<ListItemButton role={undefined} dense onClick={ filtersToggleHandler(index) } >
-											<ListItemIcon>
-												<Checkbox
-													edge="start"
-													checked={activeFilters.indexOf(index) !== -1}
-													tabIndex={-1}
-													disableRipple
-													sx={{
-														color: "var(--white-2)",
-														"&.Mui-checked": {
-															color: "var(--magenta)"
-														}
-													}}
-												/>
-											</ListItemIcon>
-											<ListItemText primary={filter} />
-										</ListItemButton>
-									</ListItem>
-								) )}
-							</List>
+						<Grid item container xs={12}>
+							<FilterLabels 
+								filters={filtersList} 
+								activeFilters={activeFilters} 
+								updateActiveFilters={updateActiveFilters}
+							/>
 						</Grid>
-						<Grid item xs={6}>
-							<List>
-								{filtersSecondHalf.map( (filter, index) => (
-									<ListItem key={index} disablePadding >
-										<ListItemButton role={undefined} dense onClick={ filtersToggleHandler((index+filtersLabelsHalfLength)) } >
-											<ListItemIcon>
-												<Checkbox
-													edge="start"
-													checked={ activeFilters.indexOf((index+filtersLabelsHalfLength)) !== -1 }
-													tabIndex={-1}
-													disableRipple
-													sx={{
-														color: "var(--white-2)",
-														"&.Mui-checked": {
-															color: "var(--magenta)"
-														}
-													}}
-												/>
-											</ListItemIcon>
-											<ListItemText primary={filter} />
-										</ListItemButton>
-									</ListItem>
-								) )}
-							</List>
-						</Grid>
-					</Grid>
-				}
+					</>
+				)}
 			</Grid>
-			<ImageList cols={2} >
+			<ImageList>
 				<Suspense fallback={<ProductsSkeleton />} >
-					<Products products={products} language={language} />
+					<Products products={products} />
 				</Suspense>
 			</ImageList>
-		</>
+		</Container>
 	);
 };
 
