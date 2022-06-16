@@ -34,5 +34,17 @@
 			"zramo",
 			"th106"
 		]
+	},
+	{
+		"id": 3,
+		"name": "Sleeved PSU Cables Pro Kit",
+		"manufacturer": "Corsair",
+		"price": 109.99,
+		"img": "https://cdn.discordapp.com/attachments/985700726833557524/986733562545991710/cosair_psu_cables.png",
+		"tag": [
+			"corsair",
+			"psu",
+			"cables"
+		]
 	}
 ]
