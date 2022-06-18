@@ -1,0 +1,138 @@
+[
+   {
+      "fullName": "NEEWER NW(B-3) anti-pop",
+      "id": 0,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/986132645262008370/neewer_nw.png",
+      "manufacturer": "NEEWER",
+      "name": "NW(B-3) anti-pop",
+      "price": 10.99
+   },
+   {
+      "fullName": "ZRAMO TH106",
+      "id": 1,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/986503068239679558/zramo_th106.png",
+      "manufacturer": "ZRAMO",
+      "name": "TH106",
+      "price": 11.99
+   },
+   {
+      "fullName": "VIVO STAND-V002",
+      "id": 2,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/986503860065533982/vivo_stand-v002.png",
+      "manufacturer": "VIVO",
+      "name": "STAND-V002",
+      "price": 34.99
+   },
+   {
+      "fullName": "Corsair Sleeved PSU Cables Pro Kit",
+      "id": 3,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/986733562545991710/cosair_psu_cables.png",
+      "manufacturer": "Corsair",
+      "name": "Sleeved PSU Cables Pro Kit",
+      "price": 109.99
+   },
+   {
+      "fullName": "Intel Core i5-9600K",
+      "id": 4,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/985700888029069362/intel_core_i5_9.png",
+      "manufacturer": "Intel",
+      "name": "Core i5-9600K",
+      "price": 260
+   },
+   {
+      "fullName": "ASUS ROG Strix BF450-F Gaming II",
+      "id": 5,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/985700886842069052/asus_rog_strix_b450f.png",
+      "manufacturer": "ASUS",
+      "name": "ROG Strix BF450-F Gaming II",
+      "price": 309
+   },
+   {
+      "fullName": "GIGABYTE GeForce RTX 2080 Ti Gaming OC",
+      "id": 6,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/985700887634784266/gigabyte_geforce_rtx_2080_ti.png",
+      "manufacturer": "GIGABYTE",
+      "name": "GeForce RTX 2080 Ti Gaming OC",
+      "price": 1041.04
+   },
+   {
+      "fullName": "Intel Core i9-12900E",
+      "id": 7,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/985700888356212766/intel_core_i9_12.png",
+      "manufacturer": "Intel",
+      "name": "Core i9-12900E",
+      "price": 494
+   },
+   {
+      "fullName": "AMD Ryzen 5 5600X",
+      "id": 8,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/985700886074490900/amd_ryzen_5.png",
+      "manufacturer": "AMD",
+      "name": "Ryzen 5 5600X",
+      "price": 134.98
+   },
+   {
+      "fullName": "PNY NVIDIA Quadro K5200",
+      "id": 9,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/985700885827055616/pny_nvidia_quadro.png",
+      "manufacturer": "PNY",
+      "name": "NVIDIA Quadro K5200",
+      "price": 638.99
+   },
+   {
+      "fullName": "AMD Ryzen Threadripper 3970X",
+      "id": 10,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/985700886389096549/amd_threadripper.png",
+      "manufacturer": "AMD",
+      "name": "Ryzen Threadripper 3970X",
+      "price": 3279.23
+   },
+   {
+      "fullName": "Cooler Master Hyper 212 RGB Black Edition",
+      "id": 11,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/985700887219560458/cooler_master_hyper_212.png",
+      "manufacturer": "Cooler Master",
+      "name": "Hyper 212 RGB Black Edition",
+      "price": 90.98
+   },
+   {
+      "fullName": "Corsair Vengeane RGB Pro 32GB (2X16GB) DDR4 3600 MHz",
+      "id": 12,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/985700888586895370/p6qe4n2i.png",
+      "manufacturer": "Corsair",
+      "name": "Vengeane RGB Pro 32GB (2X16GB) DDR4 3600 MHz",
+      "price": 166.93
+   },
+   {
+      "fullName": "Razer DeathAdder V2",
+      "id": 13,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/986783561807974420/razer_deathadder_v2.png",
+      "manufacturer": "Razer",
+      "name": "DeathAdder V2",
+      "price": 29.99
+   },
+   {
+      "fullName": "Razer Kraken",
+      "id": 14,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/987493388301508618/razer_kraken.png",
+      "manufacturer": "Razer",
+      "name": "Kraken",
+      "price": 79.95
+   },
+   {
+      "fullName": "Corsair K55 RGB PRO",
+      "id": 15,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/987493388003717210/corsair_k55_rgb_pro.png",
+      "manufacturer": "Corsair",
+      "name": "K55 RGB PRO",
+      "price": 64.99
+   },
+   {
+      "fullName": "HyperX QuadCast S",
+      "id": 16,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/987494640376746034/hyperx_quadcast_s.png",
+      "manufacturer": "HyperX",
+      "name": "QuadCast S",
+      "price": 143.68
+   }
+]
