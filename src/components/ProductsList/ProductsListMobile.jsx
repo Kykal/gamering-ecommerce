@@ -108,11 +108,12 @@ const ProductsListMobile = (props) => {
 				</Grid>
 				<Grid item xs={2} display="flex" alignItems="center" justifyContent="flex-end" >
 					<IconButton onClick={filterButtonHandler} >
-						{ filterStatus ? (
-							<FilterAltOffIcon sx={{ color: "var(--magenta)" }} />
-						) : (		
-							<FilterAltIcon sx={{ color:"var(--white-2)" }} />
-						)}
+						<FilterAltIcon
+							sx={{
+								//If filters are not rendered, color it 'white', if not, color it 'magenta'
+								color: filterStatus ? "var(--magenta)" : "var(--white-2)" 
+							}}
+						/>
 					</IconButton>
 				</Grid>
 				{filterStatus && (

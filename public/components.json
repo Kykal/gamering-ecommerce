@@ -3,6 +3,7 @@
 		"id": 0,
 		"name": "Core i5-9600K",
 		"manufacturer": "Intel",
+		"fullName": "Intel Core i5-9600K",
 		"price": 260,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700888029069362/intel_core_i5_9.png",
 		"tag": [
@@ -15,6 +16,7 @@
 		"id": 1,
 		"name": "ROG Strix BF450-F Gaming II",
 		"manufacturer": "ASUS",
+		"fullName": "ASUS ROG Strix BF450-F Gaming II",
 		"price": 309,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700886842069052/asus_rog_strix_b450f.png",
 		"tag": [
@@ -28,6 +30,7 @@
 		"id": 2,
 		"name": "GeForce RTX 2080 Ti Gaming OC",
 		"manufacturer": "GIGABYTE",
+		"fullName": "GIGABYTE GeForce RTX 2080 Ti Gaming OC",
 		"price": 1041.04,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700887634784266/gigabyte_geforce_rtx_2080_ti.png",
 		"tag": [
@@ -42,6 +45,7 @@
 		"id": 3,
 		"name": "Core i9-12900E",
 		"manufacturer": "Intel",
+		"fullName": "Intel Core i9-12900E",
 		"price": 494,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700888356212766/intel_core_i9_12.png",
 		"tag": [
@@ -54,6 +58,7 @@
 		"id": 4,
 		"name": "Ryzen 5 5600X",
 		"manufacturer": "AMD",
+		"fullName": "AMD Ryzen 5 5600X",
 		"price": 134.98,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700886074490900/amd_ryzen_5.png",
 		"tag": [
@@ -65,6 +70,7 @@
 		"id": 5,
 		"name": "NVIDIA Quadro K5200",
 		"manufacturer": "PNY",
+		"fullName": "PNY NVIDIA Quadro K5200",
 		"price": 638.99,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700885827055616/pny_nvidia_quadro.png",
 		"tag": [
@@ -77,6 +83,7 @@
 		"id": 6,
 		"name": "Ryzen Threadripper 3970X",
 		"manufacturer": "AMD",
+		"fullName": "AMD Ryzen Threadripper 3970X",
 		"price": 3279.23,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700886389096549/amd_threadripper.png",
 		"tag": [
@@ -89,6 +96,7 @@
 		"id": 7,
 		"name": "Hyper 212 RGB Black Edition",
 		"manufacturer": "Cooler Master",
+		"fullName": "Cooler Master Hyper 212 RGB Black Edition",
 		"price": 90.98,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700887219560458/cooler_master_hyper_212.png",
 		"tag": [
@@ -105,6 +113,7 @@
 		"id": 8,
 		"name": "Vengeane RGB Pro 32GB (2X16GB) DDR4 3600 MHz",
 		"manufacturer": "Corsair",
+		"fullName": "Corsair Vengeane RGB Pro 32GB (2X16GB) DDR4 3600 MHz",
 		"price": 166.93,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700888586895370/p6qe4n2i.png",
 		"tag": [

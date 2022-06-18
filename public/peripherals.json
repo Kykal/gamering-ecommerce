@@ -3,7 +3,32 @@
 		"id": 0,
 		"name": "DeathAdder V2",
 		"manufacturer": "Razer",
+		"fullName": "Razer DeathAdder V2",
 		"price": 29.99,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/986783561807974420/razer_deathadder_v2.png"
+	},
+	{
+		"id": 1,
+		"name": "Kraken",
+		"manufacturer": "Razer",
+		"fullName": "Razer Kraken",
+		"price": 79.95,
+		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987493388301508618/razer_kraken.png"
+	},
+	{
+		"id": 2,
+		"name": "K55 RGB PRO",
+		"manufacturer": "Corsair",
+		"fullName": "Corsair K55 RGB PRO",
+		"price": 64.99,
+		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987493388003717210/corsair_k55_rgb_pro.png"
+	},
+	{
+		"id": 3,
+		"name": "QuadCast S",
+		"manufacturer": "HyperX",
+		"fullName": "HyperX QuadCast S",
+		"price": 143.68,
+		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987494640376746034/hyperx_quadcast_s.png"
 	}
 ]

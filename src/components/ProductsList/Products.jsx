@@ -42,15 +42,18 @@ const Products = (props) => {
 		<>
 			{props.products.map( product => {
 
-				const productFullName = `${product.manufacturer} ${product.name}`;
+				const productFullName = product.fullName;
 				let price = product.price;
 
+				//If user has webapp language set as 'Spanish' calculate its exchange rate (Mexican Peso - MXN) .
 				if( lang==="es" ){
 					price = (price*20);
 				}
 
+				//Only two decimals
 				price = parseFloat( price.toFixed(2) );
 
+				//If price is higher or equal than 10 000, set a thousand separator.
 				if( price >= 10_000 ){
 					price = price.toLocaleString("en").replace(',', ' ')
 				}

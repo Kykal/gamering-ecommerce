@@ -29,7 +29,8 @@ const ProductPage = () => {
 	return (
 		<>
 			{ isDesktop && <HeaderDesktop /> }
-			{!isDesktop && <HeaderMobile /> }
+			{!isDesktop && <HeaderMobile	/>	}
+			<Outlet />
 		</>
 	);
 };
