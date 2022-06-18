@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
 
 
-//axios
-import axios from 'axios';
-
-
 //Redux
 import { 
 	fetchCartContentFromLocalStorage, 
@@ -28,6 +24,7 @@ import {
 	ComponentsPage,
 	HomePage,
 	PeripheralsPage,
+	ProductInfo,
 	ProductPage,
 	SearchPage
 } from './pages';
@@ -39,7 +36,7 @@ const App = () => {
 	const dispatch = useDispatch();
 	
 
-	//Before page loads, runs...
+	//Once dispatch updates its value, execute...
 	useEffect( () => {
 		dispatch( fetchCartContentFromLocalStorage() );
 		dispatch( fetchCartLengthFromLocalStorage() );
@@ -49,16 +46,16 @@ const App = () => {
 	//Component render
 	return (
 		<Routes>
-			<Route path="/"				 element={<HomePage							/>}	/>
-			<Route path="components"	 element={<ComponentsPage					/>}	/>
-			<Route path="accessories"	 element={<AccessoriesPage					/>}	/>
-			<Route path="peripherals"	 element={<PeripheralsPage					/>}	/>
-			<Route path="search"			 element={<SearchPage						/>}	/>
-			<Route path="cart"			 element={<CartPage							/>}	/>
-			<Route path="product" exact element={<ProductPage						/>}	>
-				<Route path=":id"			 element={<span>Test</span>}	/>
+			<Route path="/"					element={<HomePage							/>}	/>
+			<Route path="components"		element={<ComponentsPage					/>}	/>
+			<Route path="accessories"		element={<AccessoriesPage					/>}	/>
+			<Route path="peripherals"		element={<PeripheralsPage					/>}	/>
+			<Route path="search"				element={<SearchPage							/>}	/>
+			<Route path="cart"				element={<CartPage							/>}	/>
+			<Route path="product" exact	element={<ProductPage						/>}	>
+				<Route path=":productId"	element={<ProductInfo 						/>}	/>
 			</Route>
-			<Route path="*"				 element={<Navigate to="/" replace		/>}	/>
+			<Route path="*"					element={<Navigate to="/" replace		/>}	/>
 		</Routes>
 	);
 };
