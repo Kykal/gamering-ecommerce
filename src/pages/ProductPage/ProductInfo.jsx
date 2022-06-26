@@ -32,7 +32,7 @@ const ProductInfo = () => {
 	const isDesktop = useMediaQuery( '(min-width: 600px)' );
 	
 	//Translations
-	const [ t ] = useTranslation("global");
+	const [ t, i18n ] = useTranslation("global");
 
 	//Get data from URL
 	const { productId } = useParams();
@@ -59,9 +59,9 @@ const ProductInfo = () => {
 
 	//Component render
 	return (
-		<Container maxWidth="lg" sx={{ paddingTop: "1.25em" }} component="main" >
-			{ isDesktop && <Desktop product={product} t={t}	/>}
-			{!isDesktop && <Mobile product={product} t={t}	/>}
+		<Container maxWidth="lg" sx={{ paddingTop: "2em", paddingBottom: "2em" }} component="main" >
+			{ isDesktop && <Desktop	product={product} t={t} lang={i18n.language}	/>}
+			{!isDesktop && <Mobile	product={product}	t={t} lang={i18n.language} />}
 		</Container>
 	);
 };
