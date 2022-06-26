@@ -4,9 +4,20 @@
 		"name": "Core i5-9600K",
 		"manufacturer": "Intel",
 		"fullName": "Intel Core i5-9600K",
+		"descriptionEN": "Intel Core i5-9600K",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 260,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700888029069362/intel_core_i5_9.png",
-		"tag": [
+		"tags": [
 			"intel",
 			"core",
 			"i5"
@@ -17,9 +28,20 @@
 		"name": "ROG Strix BF450-F Gaming II",
 		"manufacturer": "ASUS",
 		"fullName": "ASUS ROG Strix BF450-F Gaming II",
+		"descriptionEN": "ASUS ROG Strix BF450-F Gaming II",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 309,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700886842069052/asus_rog_strix_b450f.png",
-		"tag": [
+		"tags": [
 			"asus",
 			"rog",
 			"strix"
@@ -31,9 +53,20 @@
 		"name": "GeForce RTX 2080 Ti Gaming OC",
 		"manufacturer": "GIGABYTE",
 		"fullName": "GIGABYTE GeForce RTX 2080 Ti Gaming OC",
+		"descriptionEN": "GIGABYTE GeForce RTX 2080 Ti Gaming OC",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 1041.04,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700887634784266/gigabyte_geforce_rtx_2080_ti.png",
-		"tag": [
+		"tags": [
 			"gigabyte",
 			"geforce",
 			"rtx",
@@ -46,9 +79,20 @@
 		"name": "Core i9-12900E",
 		"manufacturer": "Intel",
 		"fullName": "Intel Core i9-12900E",
+		"descriptionEN": "Intel Core i9-12900E",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 494,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700888356212766/intel_core_i9_12.png",
-		"tag": [
+		"tags": [
 			"intel",
 			"core",
 			"i9"
@@ -59,9 +103,20 @@
 		"name": "Ryzen 5 5600X",
 		"manufacturer": "AMD",
 		"fullName": "AMD Ryzen 5 5600X",
+		"descriptionEN": "AMD Ryzen 5 5600X",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 134.98,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700886074490900/amd_ryzen_5.png",
-		"tag": [
+		"tags": [
 			"amd",
 			"ryzen"
 		]
@@ -71,9 +126,20 @@
 		"name": "NVIDIA Quadro K5200",
 		"manufacturer": "PNY",
 		"fullName": "PNY NVIDIA Quadro K5200",
+		"descriptionEN": "PNY NVIDIA Quadro K5200",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 638.99,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700885827055616/pny_nvidia_quadro.png",
-		"tag": [
+		"tags": [
 			"pny",
 			"nvidia",
 			"quadro"
@@ -84,9 +150,20 @@
 		"name": "Ryzen Threadripper 3970X",
 		"manufacturer": "AMD",
 		"fullName": "AMD Ryzen Threadripper 3970X",
+		"descriptionEN": "Fully realize your creative vision with the Ryzen Threadripper 3970X 3.7 GHz 32-Core TRX4 Processor from AMD, which has a base clock speed of 3.7 GHz and a maximum turbo frequency of 4.5 GHz. A member of AMD's 3rd generation of Ryzen processors, this processor features 32 cores with 64 threads in a TRX4 socket with 16MB of L2 cache memory and 128MB of L3 cache memory. Having 32 cores allows the processor to run multiple programs simultaneously without slowing down the system, while the 64 threads allow a basic ordered sequence of instructions to be passed through or processed by a single CPU core. This processor also has a TDP of 280W.",
+		"descriptionES": "Realice completamente su visión creativa con el procesador Ryzen Threadripper 3970X 3.7 GHz 32-Core TRX4 de AMD, que tiene una velocidad de reloj base de 3.7 GHz y una frecuencia turbo máxima de 4.5 GHz. Miembro de la tercera generación de procesadores Ryzen de AMD, este procesador cuenta con 32 núcleos con 64 subprocesos en un zócalo TRX4 con 16 MB de memoria caché L2 y 128 MB de memoria caché L3. Tener 32 núcleos permite que el procesador ejecute múltiples programas simultáneamente sin ralentizar el sistema, mientras que los 64 subprocesos permiten que una secuencia ordenada básica de instrucciones pase o sea procesada por un solo núcleo de CPU. Este procesador también tiene un TDP de 280W.",
+		"size": [
+			"3.07 x 2.2 x 0.3 inches",
+			"7.8 x 5.6 x 0.762 cm."
+		],
+		"itemModelNumber": "B0815JJQQ8",
+		"weight": [
+			"1.7 pounds",
+			"0.771 kg."
+		],
 		"price": 3279.23,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700886389096549/amd_threadripper.png",
-		"tag": [
+		"tags": [
 			"amd",
 			"ryzen",
 			"threadripper"
@@ -97,9 +174,20 @@
 		"name": "Hyper 212 RGB Black Edition",
 		"manufacturer": "Cooler Master",
 		"fullName": "Cooler Master Hyper 212 RGB Black Edition",
+		"descriptionEN": "Cooler Master Hyper 212 RGB Black Edition",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 90.98,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700887219560458/cooler_master_hyper_212.png",
-		"tag": [
+		"tags": [
 			"cooler",
 			"master",
 			"hyper",
@@ -114,9 +202,20 @@
 		"name": "Vengeane RGB Pro 32GB (2X16GB) DDR4 3600 MHz",
 		"manufacturer": "Corsair",
 		"fullName": "Corsair Vengeane RGB Pro 32GB (2X16GB) DDR4 3600 MHz",
+		"descriptionEN": "Corsair Vengeane RGB Pro 32GB (2X16GB) DDR4 3600 MHz",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 166.93,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/985700888586895370/p6qe4n2i.png",
-		"tag": [
+		"tags": [
 			"corsair",
 			"vengeance",
 			"rgb",
