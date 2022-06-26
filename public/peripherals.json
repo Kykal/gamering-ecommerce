@@ -4,31 +4,96 @@
 		"name": "DeathAdder V2",
 		"manufacturer": "Razer",
 		"fullName": "Razer DeathAdder V2",
+		"descriptionEN": "Razer DeathAdder V2",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 29.99,
-		"img": "https://cdn.discordapp.com/attachments/985700726833557524/986783561807974420/razer_deathadder_v2.png"
+		"img": "https://cdn.discordapp.com/attachments/985700726833557524/986783561807974420/razer_deathadder_v2.png",
+		"tags": [
+			"razer",
+			"deathadder",
+			"v2"
+		]
 	},
 	{
 		"id": 1,
 		"name": "Kraken",
 		"manufacturer": "Razer",
 		"fullName": "Razer Kraken",
+		"descriptionEN": "Razer Kraken",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 79.95,
-		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987493388301508618/razer_kraken.png"
+		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987493388301508618/razer_kraken.png",
+		"tags": [
+			"razer",
+			"kraken"
+		]
 	},
 	{
 		"id": 2,
 		"name": "K55 RGB PRO",
 		"manufacturer": "Corsair",
 		"fullName": "Corsair K55 RGB PRO",
+		"descriptionEN": "Corsair K55 RGB PRO",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 64.99,
-		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987493388003717210/corsair_k55_rgb_pro.png"
+		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987493388003717210/corsair_k55_rgb_pro.png",
+		"tags": [
+			"corsair",
+			"k55",
+			"rgb",
+			"pro"
+		]
 	},
 	{
 		"id": 3,
 		"name": "QuadCast S",
 		"manufacturer": "HyperX",
 		"fullName": "HyperX QuadCast S",
+		"descriptionEN": "HyperX QuadCast S",
+		"descriptionES": "",
+		"size": [
+			"",
+			""
+		],
+		"itemModelNumber": "",
+		"weight": [
+			"",
+			""
+		],
 		"price": 143.68,
-		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987494640376746034/hyperx_quadcast_s.png"
+		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987494640376746034/hyperx_quadcast_s.png",
+		"tags": [
+			"hyperx",
+			"quadcast",
+			"quadcast s",
+			"s"
+		]
 	}
 ]
