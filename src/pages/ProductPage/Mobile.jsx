@@ -83,7 +83,7 @@ const Mobile = ({product, t, lang}) => {
 			<Typography variant="subtitle1" textAlign="justify">
 				{(descr?.length > 255 && !showMore) ? (
 					<>
-						{descr.substring(0, 255)}...
+						{descr.substring(0, 255)}...&nbsp;
 						<Typography 
 							variant="subtitle1" 
 							component="span" 
@@ -125,6 +125,11 @@ const Mobile = ({product, t, lang}) => {
 				<ProductTitle title={t("manufacturer")}		/>
 				<ProductValue value={product.manufacturer}	/>
 
+
+				<ProductTitle title={t("product.itemModelNumber")} />
+				<ProductValue value={product.itemModelNumber}	/>
+
+
 				<ProductTitle title={t("product.size")}		/>
 				{lang === "en" ? (
 					<ProductValue value={product.sizeEN}	/>
@@ -132,8 +137,6 @@ const Mobile = ({product, t, lang}) => {
 					<ProductValue value={product.sizeES}	/>
 				)}
 
-				<ProductTitle title={t("product.itemModelNumber")} />
-				<ProductValue value={product.asin}	/>
 
 				<ProductTitle title={t("product.weight")} />
 				{lang === "en" ? (
