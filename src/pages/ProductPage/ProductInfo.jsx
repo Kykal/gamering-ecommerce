@@ -51,10 +51,11 @@ const ProductInfo = () => {
 				//Get product data filtering all fetched products
 				const product = products.filter( product => product.fullName === urlProduct )[0];
 				
+				document.title = `Gamering - ${product.fullName}`;
 				//Save product data
 				setProduct(product);
 			} )
-			.catch( error => console.log( error ) )
+			.catch( error => console.log( error ) );		
 	}, [] );
 
 	//Component render

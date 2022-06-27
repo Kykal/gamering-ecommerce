@@ -22,7 +22,6 @@ const PeripheralsPage = () => {
 
 	const isDesktop = useMediaQuery('(min-width: 600px)');
 
-
 	//Component render
 	return (
 		<>

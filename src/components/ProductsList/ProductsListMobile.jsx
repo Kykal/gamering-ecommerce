@@ -17,7 +17,6 @@ import ImageList			from '@mui/material/ImageList';
 import IconButton			from '@mui/material/IconButton';
 //Icons
 import FilterAltIcon		from '@mui/icons-material/FilterAlt';
-import FilterAltOffIcon	from '@mui/icons-material/FilterAltOff';
 
 
 //Custom components
@@ -29,7 +28,7 @@ const	 Products = lazy( () => import('./Products') );
 const ProductsListMobile = (props) => {
 
 	//Translations
-	const [ t ] = useTranslation("global");
+	const [ t, i18n ] = useTranslation("global");
 
 	
 	//List of fetched products
@@ -64,10 +63,18 @@ const ProductsListMobile = (props) => {
 				//Save state
 				setFiltersList(tempFiltersList);
 				setAuxiliaryProducts(fetchedProducts);
-				setProducts(fetchedProducts);	
+				setProducts(fetchedProducts);
+				document.title = `Gamering - ${t(`${props.uri}.label`)}`
 			} )
 			.catch( error => console.log(error) );
 	}, [] ); //Do once
+
+
+	//If language is changed, update web app title too
+	useEffect( () => {
+		document.title = `Gamering - ${t(`${props.uri}.label`)}`
+	}, [i18n.language] );
+
 
 	//When activeFilters has an update...
 	useEffect( () => {
