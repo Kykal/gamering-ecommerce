@@ -46,7 +46,7 @@
 	"product": {
 		"name": "Name",
 		"itemModelNumber": "Item model number",
-		"size": "Dimesions",
+		"size": "Dimensions",
 		"weight": "Weight"
 	}
 }

@@ -4,16 +4,16 @@
 		"name": "DeathAdder V2",
 		"manufacturer": "Razer",
 		"fullName": "Razer DeathAdder V2",
-		"descriptionEN": "Razer DeathAdder V2",
-		"descriptionES": "",
+		"descriptionEN": "With over 10 million Razer DeathAdders sold, the most celebrated and awarded gaming mouse in the world has earned its popularity through its exceptional ergonomic design. Perfectly suited for a palm grip, it also works well with claw and fingertip styles. The Razer DeathAdder V2 continues this legacy, retaining its signature shape while shedding more weight for quicker handling to improve your gameplay. Going beyond conventional office ergonomics, the optimized design also provides greater comfort for gaming—important for those long raids or when you're grinding your rank on ladder.",
+		"descriptionES": "Con más de 10 millones de Razer DeathAdders vendidos, el mouse para juegos más célebre y premiado del mundo se ha ganado su popularidad gracias a su excepcional diseño ergonómico. Perfectamente adecuado para un agarre con la palma de la mano, también funciona bien con los estilos de garra y punta de los dedos. El Razer DeathAdder V2 continúa con este legado, conservando su forma distintiva mientras pierde más peso para un manejo más rápido para mejorar su juego. Yendo más allá de la ergonomía de oficina convencional, el diseño optimizado también proporciona una mayor comodidad para jugar, lo cual es importante para esas incursiones largas o cuando estás subiendo de rango.",
 		"size": [
-			"",
-			""
+			"2.87 x 5 x 1.69 inches",
+			"7.29 x 15.24 x 4.29 cm."
 		],
-		"itemModelNumber": "",
+		"itemModelNumber": "RZ01-03210100-R3U1",
 		"weight": [
-			"",
-			""
+			"6.4 ounces",
+			"181.44 gr."
 		],
 		"price": 29.99,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/986783561807974420/razer_deathadder_v2.png",
@@ -28,16 +28,16 @@
 		"name": "Kraken",
 		"manufacturer": "Razer",
 		"fullName": "Razer Kraken",
-		"descriptionEN": "Razer Kraken",
-		"descriptionES": "",
+		"descriptionEN": "The 3rd generation Razer Kraken is the wired headset for competitive gamers. Its large 50 mm drivers deliver powerful and clear sound. It's engineered for long-lasting comfort with cooling-gel cushions. A retractable microphone ensures your shotcalls are always delivered in absolute clarity.",
+		"descriptionES": "El Razer Kraken de tercera generación es el auricular con cable para jugadores competitivos. Sus grandes controladores de 50 mm ofrecen un sonido potente y claro. Está diseñado para una comodidad duradera con cojines de gel refrescante. Un micrófono retráctil garantiza que sus llamadas instantáneas siempre se entreguen con absoluta claridad.",
 		"size": [
-			"",
-			""
+			"7.87 x 6.69 x 1.55 inches",
+			"19.99 x 17 x 3.94 cm."
 		],
-		"itemModelNumber": "",
+		"itemModelNumber": "RZ04-02830200-R3U1",
 		"weight": [
-			"",
-			""
+			"11.4 ounces",
+			"323.185 gr."
 		],
 		"price": 79.95,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987493388301508618/razer_kraken.png",
@@ -51,16 +51,16 @@
 		"name": "K55 RGB PRO",
 		"manufacturer": "Corsair",
 		"fullName": "Corsair K55 RGB PRO",
-		"descriptionEN": "Corsair K55 RGB PRO",
+		"descriptionEN": "The CORSAIR K55 RGB PRO Gaming Keyboard lights up your desktop with five-zone dynamic RGB backlighting and powers up your gameplay with six easy to set up dedicated macro keys. The K55 RGB PRO is certified for IP42 dust and spill-resistance to stand up to wear, tear, and more, with a detachable palm rest to ensure all-day comfort, win after win.",
 		"descriptionES": "",
 		"size": [
-			"",
-			""
+			"20 x 9.75 x 1.8 inches",
+			"50.8 x 24.765 x 4.572 cm."
 		],
-		"itemModelNumber": "",
+		"itemModelNumber": "CH-9226765-NA/FF",
 		"weight": [
-			"",
-			""
+			"3.05 pounds",
+			"1.38 kg."
 		],
 		"price": 64.99,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987493388003717210/corsair_k55_rgb_pro.png",
@@ -76,23 +76,22 @@
 		"name": "QuadCast S",
 		"manufacturer": "HyperX",
 		"fullName": "HyperX QuadCast S",
-		"descriptionEN": "HyperX QuadCast S",
+		"descriptionEN": "The HyperX QuadCast S is a USB condenser microphone that both sounds great and looks great. The supremely stunning RGB lighting and dynamic effects will add style and flair to any stream or setup, and is customizable via HyperX Ngenuity software. The QuadCast S is an all-inclusive mic, featuring an anti-vibration shock mount to help quiet the rumbles of daily life and a built-in pop filter to muffle plosive sounds. Instantly know your mic status with the LED indicator, and simply tap-to-mute to avoid awkward broadcasting accidents. With four selectable polar patterns, this mic's prepared for nearly any recording situation and also features a gain control dial to quickly regulate input sensitivity. The included mount adapter fits 3/8” and 5/8” thread sizes, compatible with most stands. QuadCast S is certified by Discord and TeamSpeak so you can ensure that your microphone is broadcasting loud and clear for all your followers and listeners, and you can also monitor your mic in real time using the convenient headphone jack on the back of the mic. It's multi-platform compatible, so you can deliver quality sound output whether you're connecting to a PC, PS4, or Mac.",
 		"descriptionES": "",
 		"size": [
-			"",
-			""
+			"9.84 x 5.08 x 4.06 inches",
+			"25 x 12.9 x 10.3124 cm."
 		],
-		"itemModelNumber": "",
+		"itemModelNumber": "HMIQ1S-XX-RG/G",
 		"weight": [
-			"",
-			""
+			"1.32 pounds",
+			"0.60 kg."
 		],
 		"price": 143.68,
 		"img": "https://cdn.discordapp.com/attachments/985700726833557524/987494640376746034/hyperx_quadcast_s.png",
 		"tags": [
 			"hyperx",
 			"quadcast",
-			"quadcast s",
 			"s"
 		]
 	}
