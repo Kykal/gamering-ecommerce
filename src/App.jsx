@@ -1,62 +1,39 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
+
+
+//Hooks
+import { getLocalStorageItems } from './hooks/cartHooks';
 
 
 //Redux
-import { 
-	fetchCartContentFromLocalStorage, 
-	fetchCartLengthFromLocalStorage 
-} from './features/cart';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
-//React router
-import {
-	Route,
-	Routes,
-	Navigate
-} from 'react-router-dom';
+//MATERIAL DESIGN
+//Hooks
+import useMediaQuery from '@mui/material/useMediaQuery'; //For responsiveness
 
 
-//Pages
-import {
-	AccessoriesPage,
-	CartPage,
-	ComponentsPage,
-	HomePage,
-	PeripheralsPage,
-	ProductInfo,
-	ProductPage,
-	SearchPage
-} from './pages';
+//Custom components
+import AppDesktop	from './AppDesktop';
+import AppMobile	from './AppMobile';
 
 
 //Main component content
 const App = () => {
 
-	const dispatch = useDispatch();
-	
+	const cartState = useSelector( state => state.cart );
 
-	//Once dispatch updates its value, execute...
-	useEffect( () => {
-		dispatch( fetchCartContentFromLocalStorage() );
-		dispatch( fetchCartLengthFromLocalStorage() );
-	}, [dispatch] );
-
+	//To know if user is on desktop or mobile device
+	const isDesktop = useMediaQuery( '(min-width: 768px)' );
 
 	//Component render
 	return (
-		<Routes>
-			<Route path="/"					element={<HomePage							/>}	/>
-			<Route path="components"		element={<ComponentsPage					/>}	/>
-			<Route path="accessories"		element={<AccessoriesPage					/>}	/>
-			<Route path="peripherals"		element={<PeripheralsPage					/>}	/>
-			<Route path="search"				element={<SearchPage							/>}	/>
-			<Route path="cart"				element={<CartPage							/>}	/>
-			<Route path="product" exact	element={<ProductPage						/>}	>
-				<Route path=":productId"	element={<ProductInfo 						/>}	/>
-			</Route>
-			<Route path="*"					element={<Navigate to="/" replace		/>}	/>
-		</Routes>
+		<>
+			{ isDesktop && <AppDesktop /> }
+			{!isDesktop && <AppMobile /> }
+		</>
 	);
 };
 

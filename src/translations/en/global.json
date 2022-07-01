@@ -1,52 +1,5 @@
 {
-	"loadingScreen": "Loading",
-	"header": {
-		"nav": {
-			"components": {
-				"label": "COMPONENTS",
-				"url": "/components"
-			},
-			"accessories": {
-				"label": "ACCESSORIES",
-				"url": "/accessories"
-			},
-			"peripherals": {
-				"label": "PERIPHERALS",
-				"url": "/peripherals"
-			}
-		},
-		"language": "LANGUAGE",
-		"searchbar": "Search...",
-		"languageDialog": {
-			"title": "Change language",
-			"english": {
-				"label": "English",
-				"value": "en"
-			},
-			"spanish": {
-				"label": "Spanish",
-				"value": "es"
-			}
-		}
-	},
-	"components": {
-		"label": "Components"
-	},
-	"accessories": {
-		"label": "Accessories"
-	},
-	"peripherals": {
-		"label": "Peripherals"
-	},
-	"manufacturer": "Manufacturer",
-	"showMore": "Show more",
-	"showLess": "Show less",
-	"addToCart": "Add to cart",
-	"productData": "Product information",
-	"product": {
-		"name": "Name",
-		"itemModelNumber": "Item model number",
-		"size": "Dimensions",
-		"weight": "Weight"
+	"landing": {
+		"welcome": "Welcome to Gamering!"
 	}
 }

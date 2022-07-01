@@ -3,13 +3,11 @@ import { configureStore } from "@reduxjs/toolkit";
 
 
 //Import reducers
-import cart from "./features/cart";
-import responsiveness from "./features/responsiveness";
+import cartReducer from "./features/cart/cartSlice";
 
 //Set all slices in reducer class property
 export const store = configureStore({
 	reducer: {
-		cart,
-		responsiveness
-	},
+		cart: cartReducer
+	}
 });
