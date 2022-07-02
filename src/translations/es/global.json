@@ -1,5 +1,8 @@
 {
 	"landing": {
 		"welcome": "¡Bienvenido a Gamering!"
-	}
+	},
+	"components": "Components",
+	"accessories": "Accessories",
+	"peripherals": "Peripherals"
 }
