@@ -41,7 +41,7 @@ const PriceRange = styled(Slider)({
 
 const StyledCheckbox = styled(Checkbox)({
 	color: "var(--grey)",
-	"& .Mui-checked": {
+	"&.Mui-checked": {
 		color: "var(--magenta)"
 	}
 });
@@ -50,8 +50,11 @@ const StyledCheckbox = styled(Checkbox)({
 //Main component content
 const FiltersDrawer = (props) => {
 
+
 	const prices = props.filters.prices;
-	const manufacturers = props.filters.manufacturers;
+	const manufacturers = props.filters.manufacturers.label;
+	const manufacturersIndex = props.filters.manufacturers.index;
+	const manufacturersLabels = props.filters.manufacturers.active;
 
 	const halfListIndex = Math.ceil( manufacturers.length/2 );
 	const leftManufacturerList = manufacturers.slice(0, halfListIndex);
@@ -61,6 +64,25 @@ const FiltersDrawer = (props) => {
 	//Defines how slider thumb value will be displayed
 	const sliderFormat = (value) => {
 		return `US$ ${value}`;
+	};
+
+	//Prefab new value for manufacturers filter state
+	const manufacturerToggleHandler = (index, manufacturer) => () => {
+		const currentIndex = manufacturersIndex.indexOf(index);
+
+		const newManufacturersIndex = [...manufacturersIndex];
+		const newManufacturersLabel = [...manufacturersLabels];
+
+		//If item is not found in array, ad it
+		if( currentIndex === -1 ){
+			newManufacturersIndex.push(index);
+			newManufacturersLabel.push(manufacturer);
+		} else { //If it is found, remove it
+			newManufacturersIndex.splice(currentIndex, 1);
+			newManufacturersLabel.splice(currentIndex, 1);
+		}
+
+		props.onManufacturersChange(newManufacturersIndex, newManufacturersLabel);
 	};
 
 	//Component render
@@ -86,7 +108,7 @@ const FiltersDrawer = (props) => {
 			</Box>
 			<Divider sx={{ backgroundColor:"var(--grey)" }} />
 			<Box id="filter__price" paddingTop="1.25em" >
-				<Typography variant="subtitle1" ><strong>Price range</strong></Typography>
+				<Typography variant="subtitle1" ><strong>Price</strong></Typography>
 				<Box id="slider" paddingLeft="1.5em" paddingRight="1.5em" >
 					<PriceRange
 
@@ -116,17 +138,17 @@ const FiltersDrawer = (props) => {
 			<Box id="filter__manufacturer" paddingTop="1.25em" >
 				<Typography variant="subtitle1" ><strong>Manufacturers</strong></Typography>
 				<List>
-					<Grid container spacing={0}>
+					<Grid container spacing={0} >
 						<Grid item xs={6} >
 							{leftManufacturerList.map( (manufacturer, index) => (
 								<ListItem disablePadding key={index} >
-									<ListItemButton role={undefined} dense >
+									<ListItemButton role={undefined} dense onClick={manufacturerToggleHandler(index, manufacturer)} >
 										<ListItemIcon>
 											<StyledCheckbox
 												edge="start"
-												tabIndex={-1}
+												tabIndex={ -1 }
 												disableRipple
-												checked={true}
+												checked={manufacturersIndex.indexOf(index) !== -1}
 											/>
 										</ListItemIcon>
 										<ListItemText
@@ -138,14 +160,15 @@ const FiltersDrawer = (props) => {
 						</Grid>
 						<Grid item xs={6} >
 							{rightManufacturerList.map( (manufacturer, index) => (
-								<ListItem disablePadding key={index} >
-									<ListItemButton role={undefined} dense >
+								<ListItem disablePadding key={(index+halfListIndex)} >
+									<ListItemButton role={undefined} dense onClick={manufacturerToggleHandler((index+halfListIndex), manufacturer)} >
 										<ListItemIcon>
 											<StyledCheckbox
 												edge="start"
 												tabIndex={-1}
 												disableRipple
-												checked={false}
+												checked={manufacturersIndex.indexOf(index+halfListIndex) !== -1}
+
 											/>
 										</ListItemIcon>
 										<ListItemText

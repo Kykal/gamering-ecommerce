@@ -37,7 +37,11 @@ const ProductsList = (props) => {
 			actual: [0, 0],
 			minDistance: 0
 		},
-		manufacturers: []
+		manufacturers: {
+			index: [],
+			label: [],
+			active: []
+		}
 	});
 
 	//Status of filters drawer
@@ -59,7 +63,7 @@ const ProductsList = (props) => {
 				const minPrice =  Math.floor(Math.min(...components.map( component => component.price )));
 				const maxPrice =  Math.ceil(Math.max(...components.map( component => component.price )));
 
-				const tempManufacturers = [...new Set(components.map( component => component.manufacturer ))];
+				const tempManufacturers = [...new Set(components.map( component => component.manufacturer ))].sort();
 
 
 				setFilters({
@@ -71,7 +75,10 @@ const ProductsList = (props) => {
 						actual: [minPrice, maxPrice],
 						minDistance: maxPrice/4
 					},
-					manufacturers: tempManufacturers
+					manufacturers: {
+						...filters.manufacturers,
+						label: tempManufacturers
+					}
 				});
 				setComponentsList(components);
 				setFilteredList(components);
@@ -84,9 +91,16 @@ const ProductsList = (props) => {
 
 		//Save price ranges
 		const ranges = filters.prices.actual;
+		const manufacturers = filters.manufacturers.active;
 
 		//Create a new temporary list
-		const newList = componentsList.filter( component => component.price >= ranges[0] && component.price <= ranges[1] )
+		let newList = componentsList.filter( component => component.price >= ranges[0] && component.price <= ranges[1] );
+
+		//If there are at least one manufacturer as filter, filter the list
+		if( manufacturers.length !== 0 ){
+			newList = newList.filter( component => manufacturers.some( manufacturer => component.manufacturer == manufacturer ) );
+		}
+
 
 		//Update list state
 		setFilteredList( newList );
@@ -104,6 +118,19 @@ const ProductsList = (props) => {
 		setFiltersDrawerStatus(true);
 	};
 
+
+	//Update manufacturers filter
+	const manufacturersFilterHandler = (newManufacturersIndex, newManufacturersLabel) => {
+		setFilters({
+			...filters,
+			...filters.prices,
+			manufacturers: {
+				...filters.manufacturers,
+				index: newManufacturersIndex,
+				active: newManufacturersLabel
+			}
+		})
+	};
 
 	//Update price range filter 
 	const priceRangeHandlers = (event, newValue, activeThumb) => {
@@ -169,6 +196,7 @@ const ProductsList = (props) => {
 					filters={filters}
 					
 					onPriceRangeChange={priceRangeHandlers}
+					onManufacturersChange={manufacturersFilterHandler}
 				/>
 			</Drawer>
 		</>
