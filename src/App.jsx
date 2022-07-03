@@ -1,13 +1,4 @@
-import React from 'react';
-
-
-
-//Hooks
-import { getLocalStorageItems } from './hooks/cartHooks';
-
-
-//Redux
-import { useSelector } from 'react-redux';
+import React, { Suspense, lazy } from 'react';
 
 
 //MATERIAL DESIGN
@@ -15,25 +6,24 @@ import { useSelector } from 'react-redux';
 import useMediaQuery from '@mui/material/useMediaQuery'; //For responsiveness
 
 
-//Custom components
-import AppDesktop	from './AppDesktop';
-import AppMobile	from './AppMobile';
+//Custom 
+import AppSuspense from './components/AppSuspense';
+const AppDesktop	= lazy( () => import('./AppDesktop') );
+const AppMobile	= lazy( () => import('./AppMobile') );
 
 
 //Main component content
 const App = () => {
-
-	const cartState = useSelector( state => state.cart );
 
 	//To know if user is on desktop or mobile device
 	const isDesktop = useMediaQuery( '(min-width: 768px)' );
 
 	//Component render
 	return (
-		<>
+		<Suspense fallback={<AppSuspense />}>
 			{ isDesktop && <AppDesktop /> }
 			{!isDesktop && <AppMobile /> }
-		</>
+		</Suspense>
 	);
 };
 
