@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 
+//Hooks
+import { parseURL } from '../../../hooks/queryHooks';
+
+
 //React router
 import { useNavigate, NavLink } from 'react-router-dom';
 
@@ -61,9 +65,9 @@ const MenuDrawer = (props) => {
 		
 		//Restart input value
 		setSearch("");	
-		
+		props.closeDrawer();
 		//Changes URL
-		nav(`/search?query=${search}`);
+		nav(`/search?query=${parseURL(query)}`);
 	};
 
 	//Component render
@@ -103,7 +107,7 @@ const MenuDrawer = (props) => {
 				<List>
 					{navsLabels.map( (nav, index) => (
 						<ListItem key={index}>
-							<StyledNavLink to={nav.toLowerCase()} >
+							<StyledNavLink to={nav.toLowerCase()} onClick={props.closeDrawer} >
 								{({isActive}) => (
 									<ListItemButton sx={{ textAlign: "center", color: isActive ? "var(--cyan)" : "var(--white-2)"}}  >
 										<ListItemText
