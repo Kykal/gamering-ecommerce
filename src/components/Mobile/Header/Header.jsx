@@ -6,7 +6,7 @@ import logo from '../../../assets/img/logo/logo.png';
 
 
 //React router
-import { Outlet, NavLink, Link } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 
 //MATERIAL DESIGN
@@ -23,8 +23,8 @@ import { styled }	from '@mui/material/styles';
 
 
 //Custom components
-import MenuDrawer from './MenuDrawer';
-import CartButton from '../../CartButton';
+import MenuDrawer	from './MenuDrawer';
+import CartButton	from '../../CartButton';
 
 
 const HeaderSection = (props) => {
