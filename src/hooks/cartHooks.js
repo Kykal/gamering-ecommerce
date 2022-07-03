@@ -13,12 +13,16 @@ export const getLocalStorageItems = () => {
 
 export const addItemToCart = (newItem) => {
 
+	//Fetch items from localStorage
 	let items = fetchItems();
 
+	//Push in the array new item
 	items.push(newItem);
 
+	//Stringify the array
 	items = JSON.stringify(items);
 
+	//Save in localStorage as string
 	localStorage.setItem('cart', items);
 };
 
