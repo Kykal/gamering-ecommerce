@@ -105,7 +105,7 @@ const ProductsList = (props) => {
 		//Update list state
 		setFilteredList( newList );
 
-	}, [filters] );
+	}, [filtersDrawerStatus] );
 
 
 	//Close filters drawer
@@ -168,19 +168,24 @@ const ProductsList = (props) => {
 					<FilterAltIcon />
 				</IconButton>
 			</Box>
-			<ImageList>
-				{filteredList.map( (component, index) => (
-					<Suspense key={index} fallback={<ItemSkeleton />} >
-						<Item component={component} />
-					</Suspense>
-				) )}
-			</ImageList>
+			{filteredList.length > 0 ? (
+				<ImageList>
+					{filteredList.map( (component, index) => (
+						<Suspense key={index} fallback={<ItemSkeleton />} >
+							<Item component={component} />
+						</Suspense>
+					) )}
+				</ImageList>
+			) : (
+				<Typography variant="h4" textAlign="center" >
+					No matches found
+				</Typography>
+			)}
 			<Drawer 
 				open={filtersDrawerStatus}
 				onClose={closeFiltersDrawer}
 				
 				anchor="bottom"
-				
 
 				sx={{
 					"& .MuiPaper-root":{
