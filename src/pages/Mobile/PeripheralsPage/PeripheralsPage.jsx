@@ -6,17 +6,17 @@ import ProductsList from '../../../components/ProductsList/ProductsList';
 
 
 //Main component content
-const ComponentsPage = () => {
+const PeripheralsPage = () => {
 
 
 	//Component render
 	return (
 		<ProductsList
-			label="Components"
-			category="components"
+			label="Peripherals"
+			category="peripherals"
 		/>
 	);
 };
 
 
-export default ComponentsPage; //Export main component
+export default PeripheralsPage; //Export main component
