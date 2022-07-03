@@ -46,11 +46,27 @@ const Item = (props) => {
 
 	//Component render
 	return (
-		<ImageListItem sx={{ cursor: "pointer" }} >
+		<ImageListItem
+			sx={{ 
+				cursor: "pointer",
+				"@keyframes fadeIn": {
+					from: {
+						opacity: 0,
+					},
+					to: {
+						opacity: 1
+					}
+				},
+				animationName: "fadeIn",
+				animationDuration: "0.5s"
+			}}
+		>
 			<img 
 				src={props.component.img} 
 				alt={props.component.fullName} 
 				onClick={sendToProductPage}
+
+				loading="lazy"
 			/>
 			<ImageListItemBar
 				title={props.component.fullName}
