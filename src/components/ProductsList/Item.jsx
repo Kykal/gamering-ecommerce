@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 //Hooks
@@ -26,8 +26,11 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 //Main component content
 const Item = (props) => {
 
-	const navigate = useNavigate();
-	const dispatch = useDispatch();
+	//Defines when the image is fully loaded
+	const [ isImageLoaded, setIsImageLoaded ] = useState(false);
+
+	const navigate = useNavigate(); //To browse between pages
+	const dispatch = useDispatch(); //Redux
 
 	//Add item to cart
 	const addItem = () => {
@@ -44,21 +47,18 @@ const Item = (props) => {
 		navigate(`/product/${parseURL(props.component.fullName)}`);
 	};
 
+	//To update state
+	const imageLoadHandler = () => {
+		setIsImageLoaded(true);
+	};
+
 	//Component render
 	return (
 		<ImageListItem
-			sx={{ 
+			sx={{
 				cursor: "pointer",
-				"@keyframes fadeIn": {
-					from: {
-						opacity: 0,
-					},
-					to: {
-						opacity: 1
-					}
-				},
-				animationName: "fadeIn",
-				animationDuration: "0.5s"
+				opacity: isImageLoaded ? "1" : "0",
+				transition: "0.25s opacity",
 			}}
 		>
 			<img 
@@ -66,7 +66,7 @@ const Item = (props) => {
 				alt={props.component.fullName} 
 				onClick={sendToProductPage}
 
-				loading="lazy"
+				onLoad={imageLoadHandler}
 			/>
 			<ImageListItemBar
 				title={props.component.fullName}
