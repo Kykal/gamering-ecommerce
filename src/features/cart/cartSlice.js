@@ -16,11 +16,18 @@ export const cartSlice = createSlice({
 			state.push(newItem); //Update state
 
 			addItemToCart(newItem); //Update localStorage
+		},
+
+		/////// DO NOT USE IN PRODUCTION ///////
+		clearCartRedux: (state) => {
+			localStorage.setItem('cart', '[]');
+			return state = [];
 		}
+		/////// DO NOT USE IN PRODUCTION ///////
 	}
 });
 
 
-export const { addItemRedux } = cartSlice.actions;
+export const { addItemRedux, clearCartRedux } = cartSlice.actions;
 
 export default cartSlice.reducer;
