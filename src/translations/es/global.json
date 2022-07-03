@@ -1,52 +1,8 @@
 {
-	"loadingScreen": "Cargando",
-	"header": {
-		"nav": {
-			"components": {
-				"label": "COMPONENTES",
-				"url": "/components"
-			},
-			"accessories": {
-				"label": "ACCESORIOS",
-				"url": "/accessories"
-			},
-			"peripherals": {
-				"label": "PERIFÉRICOS",
-				"url": "/peripherals"
-			}
-		},
-		"language": "IDIOMA",
-		"searchbar": "Buscar...",
-		"languageDialog": {
-			"title": "Cambiar idioma",
-			"english": {
-				"label": "Inglés",
-				"value": "en"
-			},
-			"spanish": {
-				"label": "Español",
-				"value": "es"
-			}
-		}
+	"landing": {
+		"welcome": "¡Bienvenido a Gamering!"
 	},
-	"components": {
-		"label": "Componentes"
-	},
-	"accessories": {
-		"label": "Accesorios"
-	},
-	"peripherals": {
-		"label": "Periféricos"
-	},
-	"manufacturer": "Fabricante",
-	"showMore": "Ver más",
-	"showLess": "Ver menos",
-	"addToCart": "Agregar al carrito",
-	"productData": "Información del producto",
-	"product": {
-		"name": "Nombre",
-		"itemModelNumber": "Número de modelo",
-		"size": "Dimensiones",
-		"weight": "Peso"
-	}
+	"components": "Components",
+	"accessories": "Accessories",
+	"peripherals": "Peripherals"
 }

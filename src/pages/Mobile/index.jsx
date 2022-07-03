@@ -1,0 +1,1 @@
+export { default as ComponentPage } from './ComponentsPage';
