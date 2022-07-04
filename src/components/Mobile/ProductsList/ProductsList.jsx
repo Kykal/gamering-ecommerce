@@ -177,7 +177,7 @@ const ProductsList = (props) => {
 					) )}
 				</ImageList>
 			) : (
-				<Typography variant="h4" textAlign="center" >
+				<Typography variant="h6" textAlign="center" >
 					No matches found
 				</Typography>
 			)}

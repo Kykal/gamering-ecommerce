@@ -21,9 +21,12 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const CartButton = () => {
 
 
-	//Get array length of objects
-	const cartContent = useSelector(state => state.cart.length);
-
+	//Get array
+	const cart = useSelector(state => state.cart);
+	
+	//Total amount of products in cart
+	
+	let cartContent = cart.map( product => product.quantity ).reduce( (prevProduct, currentProduct) => prevProduct + currentProduct, 0 );
 	
 	//Component render
 	return (
