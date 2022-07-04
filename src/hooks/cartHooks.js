@@ -26,7 +26,23 @@ export const addItemToCart = (newItem) => {
 	localStorage.setItem('cart', items);
 };
 
+export const removeItemLocalStorage = (index) => {
 
+	let items = Array(...fetchItems());
+
+	items.splice(index, 1);
+
+
+	items = JSON.stringify(items);
+
+	localStorage.setItem('cart', items );
+};
+
+export const updateLocalStorage = (newList) => {
+	newList = JSON.stringify(newList);
+
+	localStorage.setItem('cart', newList);
+}
 
 
 //LOCAL USE ONLY

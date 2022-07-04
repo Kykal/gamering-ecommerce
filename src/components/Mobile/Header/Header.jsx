@@ -73,8 +73,8 @@ const Header = () => {
 						</Link>
 					</HeaderSection>
 					<HeaderSection id="menu-container" xs={2} >
-						<IconButton onClick={openDrawer} sx={{ color:"var(--white-2)" }} >
-							<MenuIcon />
+						<IconButton onClick={openDrawer} size="large" sx={{ color:"var(--white-2)" }} >
+							<MenuIcon fontSize="inherit" />
 						</IconButton>
 					</HeaderSection>
 				</Grid>

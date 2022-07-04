@@ -2,7 +2,7 @@ import React from 'react';
 
 
 //Custom components
-import ProductsList from '../../../components/ProductsList/ProductsList';
+import ProductsList from '../../../components/Mobile/ProductsList';
 
 
 //Main component content

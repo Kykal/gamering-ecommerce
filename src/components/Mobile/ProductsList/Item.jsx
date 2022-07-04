@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useId } from 'react';
 
 
 //Hooks
-import { parseURL } from '../../hooks/queryHooks';
+import { parseURL } from '../../../hooks/queryHooks';
 
 
 //React router
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 //Redux
 import { useDispatch } from 'react-redux';
-import { addItemRedux } from '../../features/cart/cartSlice';
+import { addItemRedux } from '../../../features/cart/cartSlice';
 
 
 //MATERIAL DESIGN
@@ -26,6 +26,8 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 //Main component content
 const Item = (props) => {
 
+	const productId = useId();
+
 	//Defines when the image is fully loaded
 	const [ isImageLoaded, setIsImageLoaded ] = useState(false);
 
@@ -35,9 +37,11 @@ const Item = (props) => {
 	//Add item to cart
 	const addItem = () => {
 		const newItem = {
+			id: productId,
 			fullName: props.component.fullName,
 			img: props.component.img,
-			price: props.component.price
+			price: props.component.price,
+			quantity: 1
 		}
 		dispatch( addItemRedux(newItem) );
 	};
