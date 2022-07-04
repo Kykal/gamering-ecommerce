@@ -19,7 +19,14 @@ export const cartSlice = createSlice({
 			//Save locally localStorage products list
 			let currentList = Array(...getLocalStorageItems());
 
-			const newItem = actions.payload;
+			let newItem = actions.payload;
+
+			newItem = {
+				fullName: newItem.fullName,
+				img: newItem.img,
+				price: newItem.price,
+				quantity: 1
+			}
 
 			const findProduct = currentList.find( product => product.fullName === newItem.fullName );
 			

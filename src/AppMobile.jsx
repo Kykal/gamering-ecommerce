@@ -22,6 +22,7 @@ import CartPage			from './pages/Mobile/CartPage';
 import ComponentsPage	from './pages/Mobile/ComponentsPage';
 import PeripheralsPage	from './pages/Mobile/PeripheralsPage';
 import SearchPage			from './pages/Mobile/SearchPage/SearchPage';
+import ProductPage		from './pages/Mobile/ProductPage/ProductPage';
 
 
 //Main component content
@@ -40,7 +41,7 @@ const AppMobile = () => {
 				<Route path="peripherals"			element={<PeripheralsPage				/>} />
 				<Route path="search"					element={<SearchPage						/>} />
 				<Route path="product"				element={<Navigate to="/" replace	/>} />
-				<Route path="product/:productId" element={<span>Product page</span>} />
+				<Route path="product/:productId" element={<ProductPage					/>} />
 			</Route>
 			{/*<Route path="*" element={<Navigate to="/" replace />} />*/}
 		</Routes>

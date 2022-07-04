@@ -1,4 +1,4 @@
-import React, { useState, useId } from 'react';
+import React, { useState } from 'react';
 
 
 //Hooks
@@ -26,7 +26,6 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 //Main component content
 const Item = (props) => {
 
-	const productId = useId();
 
 	//Defines when the image is fully loaded
 	const [ isImageLoaded, setIsImageLoaded ] = useState(false);
@@ -37,7 +36,6 @@ const Item = (props) => {
 	//Add item to cart
 	const addItem = () => {
 		const newItem = {
-			id: productId,
 			fullName: props.component.fullName,
 			img: props.component.img,
 			price: props.component.price,
