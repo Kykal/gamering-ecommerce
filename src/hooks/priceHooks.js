@@ -1,4 +1,4 @@
-export const transformPrice = (oldPrice) => {
+export const transformPrice = (oldPrice = 0) => {
 
 	let newPrice = parseFloat(oldPrice.toFixed(2));
 
