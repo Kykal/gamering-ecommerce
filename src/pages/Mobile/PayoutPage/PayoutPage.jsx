@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 
+//Hooks
+import { transformPrice } from '../../../hooks/priceHooks';
+
+
 //React router
 import { useNavigate } from 'react-router-dom';
 
@@ -63,13 +67,14 @@ const PayoutPage = () => {
 	const cart = useSelector( state => state.cart );
 	const dispatch = useDispatch();
 	
-	
-	const totalProductsCost = cart.map( product => product.price * product.quantity ).reduce(
+	//Obtain total cost of all products
+	const totalProductsCost = parseFloat(cart.map( product => product.price * product.quantity ).reduce(
 		(prevProduct, actualProduct) => prevProduct+actualProduct, 0
-	).toFixed(2);
-	const shippingCost = (totalProductsCost*0.10).toFixed(2);
+	).toFixed(2));
+	//Calculate shipping cost (10% of total cost)
+	const shippingCost = parseFloat((totalProductsCost*0.10).toFixed(2));
 
-	const totalCost = (parseFloat(totalProductsCost+shippingCost)).toFixed(2);
+	const totalCost =  transformPrice(totalProductsCost+shippingCost);
 
 	const todayDate = new Date();
 
@@ -154,7 +159,7 @@ const PayoutPage = () => {
 								Total (with TAX if applicable)
 							</strong>
 						</Typography>
-						<Typography variant="h6" sx={{ color: "var(--magenta) !important" }} >
+						<Typography variant="h6" sx={{ color: "var(--magenta) !important", width: "70%" }} textAlign="right" >
 							<strong>
 								US$&nbsp;{totalCost}
 							</strong>
