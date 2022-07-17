@@ -5,7 +5,8 @@ import {
 	getLocalStorageItems, 
 	addItemToCart, 
 	removeItemLocalStorage, 
-	updateLocalStorage
+	updateLocalStorage,
+	clearCart
 } from "../../hooks/cartHooks";
 
 
@@ -83,14 +84,10 @@ export const cartSlice = createSlice({
 			return state = currentList;
 		},
 
-
-
-		/////// DO NOT USE IN PRODUCTION ///////
 		clearCartRedux: (state) => {
-			localStorage.setItem('cart', '[]');
+			clearCart();
 			return state = [];
 		}
-		/////// DO NOT USE IN PRODUCTION ///////
 	}
 });
 

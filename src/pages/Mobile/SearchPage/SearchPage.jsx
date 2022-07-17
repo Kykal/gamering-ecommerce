@@ -31,10 +31,16 @@ const SearchPage = () => {
 	const [ params ] = useSearchParams();
 
 	useEffect( () => {
+		document.title = "Gamering - Search";
+	}, [] )
+
+	useEffect( () => {
 		axios.get('/database.json')
 			.then( response => {
 				let coincidences = response.data;
-				const query = unparseQueryURL(params.get('query'));
+				const [query, string] = unparseQueryURL(params.get('query'));
+
+				document.title = `Gamering - Search: ${string}`;
 
 				coincidences = coincidences.filter( product => {
 					const name = product.fullName.toLowerCase();

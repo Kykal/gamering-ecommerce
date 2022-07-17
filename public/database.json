@@ -270,5 +270,37 @@
       "sizeES": "25 x 12.9 x 10.3124 cm.",
       "weightEN": "1.32 pounds",
       "weightES": "0.60 kg."
+   },
+   {
+      "category": "accessories",
+      "descriptionEN": "RGB gaming mouse pad with 15 RGB lighting modes, including Red, green, blue, purple, indigo, yellow, white, magenta, orange, alternating wave, synchronizing wave, alternating flash, alternating red changing, , synchronize breathing, alternate breathing, Power-off memory mode, lights off, provides the visually stunning of colors and effects.",
+      "descriptionES": "Alfombrilla de ratón para juegos RGB con 15 modos de iluminación RGB, incluidos rojo, verde, azul, morado, índigo, amarillo, blanco, magenta, naranja, onda alterna, onda de sincronización, flash alterno, cambio de rojo alterno, respiración sincronizada, respiración alternativa, potencia -Modo de memoria apagado, luces apagadas, proporciona colores y efectos visualmente impresionantes.",
+      "fullName": "Trvaago Large RGB Gaming Mouse Pad",
+      "id": 17,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/994467555932651570/trvaago_large_rgb_gaming_mouse_pad.png",
+      "itemModelNumber": "US017",
+      "manufacturer": "Trvaago",
+      "name": "Large RGB Gaming Mouse Pad",
+      "price": 18.99,
+      "sizeEN": "31.5 x 12 x 0.12 inches",
+      "sizeES": "80 x 30.48 x 0.3048 cm.",
+      "weightEN": "1.17 pounds",
+      "weightES": "0.53 kg."
+   },
+   {
+      "category": "peripherals",
+      "descriptionEN": "Experience endless immersion with EX2710Q 27” QHD IPS 165Hz gaming monitor. This display is purpose-built to amplify intensity with HDRi, Game Mode, and other visual optimizers, along with stellar treVolo speakers. Plus, BenQ proprietary eye-care and the ergonomic adjustable stand look out for your comfort while you're focused on the action.",
+      "descriptionES": "Experimente una inmersión sin fin con el monitor para juegos EX2710Q de 27” QHD IPS 165Hz. Esta pantalla está diseñada específicamente para amplificar la intensidad con HDRi, Game Mode y otros optimizadores visuales, junto con los estelares parlantes treVolo. Además, el cuidado de la vista exclusivo de BenQ y el soporte ergonómico ajustable velan por su comodidad mientras se concentra en la acción.",
+      "fullName": "BenQ MOBIUZ EX2710Q 27''",
+      "id": 18,
+      "img": "https://cdn.discordapp.com/attachments/985700726833557524/994471204423487619/benq_mobiuz_ex2710q_27.png",
+      "itemModelNumber": "EX2710Q",
+      "manufacturer": "BenQ",
+      "name": "Large RGB Gaming Mouse Pad",
+      "price": 459,
+      "sizeEN": "24 x 9.92 x 20.69 inches",
+      "sizeES": "60.77 x 25.21 x 52.55 cm.",
+      "weightEN": "15.65 pounds ",
+      "weightES": "7.1 kg."
    }
 ]

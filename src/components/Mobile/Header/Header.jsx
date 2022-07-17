@@ -79,7 +79,7 @@ const Header = () => {
 					</HeaderSection>
 				</Grid>
 			</AppBar>
-			<Container maxWidth="lg" sx={{ paddingTop: "1.25em", paddingBottom:"1.25em" }} component="main" >
+			<Container maxWidth="lg" sx={{ paddingTop: "1.25em", paddingBottom:"1.25em" }} component="main" className="root" >
 				<Outlet />
 			</Container>
 			<Drawer open={drawerStatus} onClose={closeDrawer} anchor="right">
