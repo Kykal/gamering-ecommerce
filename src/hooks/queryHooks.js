@@ -7,10 +7,10 @@ export const parseURL = (oldURL) => {
 
 //Turns every string into a query key
 export const unparseQueryURL = (oldURL) => {
-	let newURL = oldURL.split('+').join(' ').split(' ');
-	newURL = newURL.map( query => query.toLowerCase() );
+	const string = oldURL.split('+').join(' ');
+	const query = string.split(' ').map( query => query.toLowerCase() );
 
-	return newURL;
+	return [query, string];
 }
 
 

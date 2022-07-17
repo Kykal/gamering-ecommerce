@@ -45,6 +45,10 @@ export const updateLocalStorage = (newList) => {
 }
 
 
+export const clearCart = () => {
+	localStorage.setItem('cart', '[]');
+};
+
 //LOCAL USE ONLY
 const fetchItems = () => {
 	return JSON.parse(localStorage.getItem('cart'));
